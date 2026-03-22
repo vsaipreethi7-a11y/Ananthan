@@ -89,9 +89,6 @@ const translations = {
       p3: 'With a distinguished global career, Ananthan is an Ex-Engineering Director at Intel, USA, where he led advanced semiconductor engineering initiatives and holds multiple patents. His work has contributed to cutting-edge technology that powers modern computing systems worldwide.',
       p4: 'Beyond his corporate leadership, he is the Founder & CEO of TenSemi.com, a semiconductor-focused initiative aimed at nurturing high-tech talent and innovation. He also founded VoiceofTenkasi.org and Vaazhai.org, platforms dedicated to social awareness, grassroots development, and amplifying regional voices.',
       p5: 'Driven by a bold and future-focused vision, Ananthan envisions creating ONE LAKH Hi-Tech Jobs in Tenkasi by 2032—transforming the region into a hub for technology, skills, and sustainable economic growth.',
-      expertise: 'Expertise',
-      topSkills: 'Top Skills',
-      experience: 'Experience',
       careerHistory: 'Career History',
       leadership: 'Leadership',
       socialLeadership: 'Social & Political Leadership',
@@ -137,8 +134,12 @@ const translations = {
       badge: 'Photos',
       title: 'Photo Gallery',
       description: 'Moments from rallies, welfare camps, educational initiatives, and community events across Tenkasi.',
-      videoTitle: 'Video Gallery',
-      videoDesc: 'Watch highlights from rallies, events, speeches, and community initiatives'
+      videoTitle: 'Videos',
+      videoDesc: 'Watch highlights from rallies, events, speeches, and community initiatives',
+      videos: 'Videos',
+      catVoice: 'Voice of People',
+      catAnanthan: 'Ananthan',
+      catModiCamps: 'Modi Camps'
     },
     connect: {
       badge: 'Contact',
@@ -205,9 +206,6 @@ const translations = {
       p3: 'அமெரிக்காவின் இன்டெல் நிறுவனத்தில் முன்னாள் பொறியியல் இயக்குநராகப் பணியாற்றிய ஆனந்தன், மேம்பட்ட செமிகண்டக்டர் பொறியியல் முன்னெடுப்புகளுக்குத் தலைமை தாங்கி பல காப்புரிமைகளைப் பெற்றுள்ளார். அவரது பணி உலகம் முழுவதும் நவீன கணினி அமைப்புகளை இயக்கும் அதிநவீன தொழில்நுட்பத்திற்கு பங்களித்துள்ளது.',
       p4: 'தனது கார்ப்பரேட் தலைமைக்கு அப்பால், அவர் TenSemi.com-ன் நிறுவனர் மற்றும் CEO ஆவார், இது உயர் தொழில்நுட்ப திறமை மற்றும் புதுமைகளை வளர்ப்பதை நோக்கமாகக் கொண்ட ஒரு செமிகண்டக்டர் முன்முயற்சியாகும். அவர் VoiceofTenkasi.org மற்றும் Vaazhai.org ஆகியவற்றைத் தொடங்கினார், இது சமூக விழிப்புணர்வு, அடிமட்ட வளர்ச்சி மற்றும் பிராந்திய குரல்களை மேம்படுத்துவதற்கான தளங்களாகும்.',
       p5: 'தைரியமான மற்றும் எதிர்காலத்தை நோக்கிய பார்வையால் ஈர்க்கப்பட்ட ஆனந்தன், 2032 ஆம் ஆண்டிற்குள் தென்காசியில் ஒரு லட்சம் உயர் தொழில்நுட்ப வேலைகளை உருவாக்குவதை எதிர்நோக்குகிறார் - இப்பகுதியை தொழில்நுட்பம், திறன்கள் மற்றும் நிலையான பொருளாதார வளர்ச்சிக்கான மையமாக மாற்றுகிறார்.',
-      expertise: 'நிபுணத்துவம்',
-      topSkills: 'சிறந்த திறன்கள்',
-      experience: 'அனுபவம்',
       careerHistory: 'பணி வரலாறு',
       leadership: 'தலைமைத்துவம்',
       socialLeadership: 'சமூக மற்றும் அரசியல் தலைமை',
@@ -253,8 +251,12 @@ const translations = {
       badge: 'புகைப்படங்கள்',
       title: 'புகைப்படத் தொகுப்பு',
       description: 'தென்காசி முழுவதும் நடைபெற்ற பேரணிகள், நல முகாம்கள், கல்வி முயற்சிகள் மற்றும் சமூக நிகழ்வுகளின் தருணங்கள்.',
-      videoTitle: 'வீடியோ தொகுப்பு',
-      videoDesc: 'பேரணிகள், நிகழ்வுகள், உரைகள் மற்றும் சமூக முயற்சிகளின் சிறப்பம்சங்களைப் பாருங்கள்'
+      videoTitle: 'வீடியோக்கள்',
+      videoDesc: 'பேரணிகள், நிகழ்வுகள், உரைகள் மற்றும் சமூக முயற்சிகளின் சிறப்பம்சங்களைப் பாருங்கள்',
+      videos: 'வீடியோக்கள்',
+      catVoice: 'மக்களின் குரல்',
+      catAnanthan: 'ஆனந்தன்',
+      catModiCamps: 'மோடி முகாம்கள்'
     },
     connect: {
       badge: 'தொடர்பு',

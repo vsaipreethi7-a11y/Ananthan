@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Users, Target, Award, Calendar, BookOpen, Trophy, Heart, Building, Newspaper } from "lucide-react";
+import { TrendingUp, Users, Target, Award, BookOpen, Trophy, Heart } from "lucide-react";
 import Layout from "@/components/Layout";
 import impactImg from "@/assets/impact.png";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -53,9 +53,6 @@ const Impact = () => {
   const secondaryStats = [
     { icon: Trophy, number: "100+", label: "Sport Events", detail: "Kabaddi, Chess, Silambam, Yoga" },
     { icon: Heart, number: "200+", label: "Medical Camps", detail: "Free healthcare in remote villages" },
-    { icon: Building, number: "4.5 Lakh", label: "Sq.Ft Wall Writings", detail: "BJP visibility across district" },
-    { icon: Calendar, number: "1.5 Lakh+", label: "Modi Calendars", detail: "Distributed to households" },
-    { icon: Newspaper, number: "1,000+", label: "News Imprints", detail: "Media coverage generated" },
     { icon: Heart, number: "300+", label: "Annadanam & Puja", detail: "Temple renovations, community service" },
   ];
 
@@ -115,24 +112,24 @@ const Impact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-8 pb-20 bg-gradient-to-br from-sage/5 via-background to-gold/5">
+      <section className="pt-20 pb-12 md:pb-20 bg-gradient-to-br from-sage/5 via-background to-gold/5">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="text-left"
             >
-              <div className="inline-block bg-gold/10 px-6 py-2 rounded-full mb-6">
-                <p className="text-sage font-body text-sm uppercase tracking-[0.2em] font-semibold">{t('impact.badge')}</p>
+              <div className="inline-block bg-gold/10 px-4 py-2 rounded-full mb-4">
+                <p className="text-sage font-body text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">{t('impact.badge')}</p>
               </div>
 
-              <h1 className="font-display text-4xl md:text-7xl font-bold text-foreground mb-6">
+              <h1 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">{t('impact.title')}</span>
               </h1>
 
-              <p className="font-body text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
+              <p className="font-body text-base md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
                 {t('impact.description')}
               </p>
             </motion.div>
@@ -163,56 +160,37 @@ const Impact = () => {
 
 
 
-      {/* Ground Presence & Mobilization Section (New Section with Request Images) */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      {/* Ground Presence & Mobilization Section */}
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-3xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="relative order-2 lg:order-1"
-            >
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <div className="rounded-2xl overflow-hidden shadow-lg border border-border mt-8">
-                    <img src={impact1Img} alt="Ground Mobilization 1" className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <div className="bg-sage p-6 rounded-2xl text-cream">
-                    <div className="text-3xl font-bold mb-2">2,500+</div>
-                    <div className="text-sm opacity-80 uppercase tracking-widest font-bold">Booth Meetings</div>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="bg-gold p-6 rounded-2xl text-foreground">
-                    <div className="text-3xl font-bold mb-2">1,000+</div>
-                    <div className="text-sm opacity-80 uppercase tracking-widest font-bold">Village Visits</div>
-                  </div>
-                  <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
-                    <img src={impact2Img} alt="Ground Mobilization 2" className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" />
-                  </div>
-                </div>
-              </div>
-              {/* Abstract decorative shape */}
-              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-cream/50 rounded-full blur-3xl" />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="order-1 lg:order-2"
             >
               <div className="inline-block bg-sage/10 text-sage px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                 Direct Engagement
               </div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
                 Strengthening the <br />
                 <span className="text-sage">Grassroots Presence</span>
               </h2>
               <p className="text-muted-foreground font-body text-lg leading-relaxed mb-8">
                 True impact is measured by the strength of our connections on the ground. Through regular booth-level meetings, village outreach programs, and direct cadre engagement, we have built a resilient organizational structure across all 7 assembly constituencies.
               </p>
+
+              {/* Stat cards inline */}
+              <div className="grid grid-cols-2 gap-4 mb-10">
+                <div className="bg-sage p-6 rounded-2xl text-cream">
+                  <div className="text-3xl font-bold mb-1">2,500+</div>
+                  <div className="text-sm opacity-80 uppercase tracking-widest font-bold">Booth Meetings</div>
+                </div>
+                <div className="bg-gold p-6 rounded-2xl text-foreground">
+                  <div className="text-3xl font-bold mb-1">1,000+</div>
+                  <div className="text-sm opacity-80 uppercase tracking-widest font-bold">Village Visits</div>
+                </div>
+              </div>
 
               <div className="space-y-6">
                 {[
@@ -274,7 +252,7 @@ const Impact = () => {
           </div>
 
           {/* Secondary Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
             {secondaryStats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -340,93 +318,7 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Leadership Achievement Report Card */}
-      <section className="py-24 bg-sage relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-sage-dark to-sage opacity-95" />
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform -mr-20" />
 
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-3 gap-12 items-center mb-16">
-            <div className="lg:col-span-1">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-12 h-1 bg-gold mb-6" />
-                <h2 className="font-display text-4xl md:text-5xl font-bold text-cream mb-6">
-                  Leadership <br />Achievement <br />Report Card
-                </h2>
-                <p className="text-cream/70 font-body text-lg leading-relaxed">
-                  Demonstrating measurable growth and structural strengthening of BJP across Tenkasi since assuming leadership.
-                </p>
-              </motion.div>
-            </div>
-
-            <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
-              {leadershipMetrics.map((metric, index) => (
-                <motion.div
-                  key={metric.metric}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all"
-                >
-                  <h3 className="text-white/80 font-display font-medium mb-6 uppercase tracking-wider text-sm">{metric.metric}</h3>
-                  <div className="flex items-end justify-between mb-4">
-                    <div className="text-white/60">
-                      <div className="text-xs mb-1">Before</div>
-                      <div className="text-2xl font-bold">{metric.before}</div>
-                    </div>
-                    <div className="text-gold">
-                      <div className="text-xs mb-1 text-right">After</div>
-                      <div className="text-4xl font-bold">{metric.after}</div>
-                    </div>
-                  </div>
-                  <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: "100%" }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.5, delay: index * 0.2 }}
-                      className="h-full bg-gradient-to-r from-gold/50 to-gold"
-                    />
-                  </div>
-                  <div className="mt-2 text-right text-gold font-bold">{metric.growth} Growth</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-sage-dark/30 backdrop-blur-sm rounded-3xl p-10 border border-white/10">
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-10 h-10 bg-gold/20 rounded-xl flex items-center justify-center">
-                <TrendingUp className="text-gold w-6 h-6" />
-              </div>
-              <h3 className="text-cream font-display text-2xl font-bold">Assembly-wise Strategic Growth</h3>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-              {assemblyGrowth.map((item, index) => (
-                <motion.div
-                  key={item.assembly}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="group"
-                >
-                  <div className="text-gold text-3xl font-bold mb-1 group-hover:scale-110 transition-transform">{item.growth}</div>
-                  <div className="text-cream/50 text-xs uppercase tracking-widest font-bold">{item.assembly}</div>
-                  <div className="mt-3 h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                    <div className="h-full bg-gold/40 w-full" />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Social Media / Twitter Section */}
       <section className="py-20 bg-sage-dark text-cream">

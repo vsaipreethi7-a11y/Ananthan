@@ -39,13 +39,6 @@ import bjpPresident from "@/assets/Journey/bjp_district_president.png";
 import oneNation from "@/assets/hero/ONE NATION ONE DREAM.jpg";
 import megaRally from "@/assets/Journey/governor_visit.png";
 
-const skills = [
-  { text: "Grassroot level organizer, especially in Rural Districts", icon: Users },
-  { text: "Planning and Winning Elections (since 2006)", icon: Target },
-  { text: "Semiconductor Architect w/ multiple patents (USA)", icon: Lightbulb },
-  { text: "Technocrat who led Global teams to success", icon: Globe },
-  { text: "Social Entrepreneur & NGO Leader", icon: Heart }
-];
 
 const careerHistory = [
   {
@@ -280,9 +273,6 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="text-left order-2 lg:order-1"
             >
-              <div className="inline-block bg-sage/10 px-4 py-2 rounded-full mb-4">
-                <p className="text-sage font-body text-xs uppercase tracking-[0.2em] font-semibold">{t('about.badge')}</p>
-              </div>
               <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
                 <span>{t('about.title').split(' ')[0]}</span>{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">{t('about.title').split(' ').slice(1).join(' ')}</span>
@@ -441,42 +431,6 @@ const About = () => {
         </section>
       </div>
 
-      {/* Top Skills */}
-      <section className="py-20 bg-gradient-to-b from-cream to-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <p className="text-sage font-body text-sm uppercase tracking-[0.2em] mb-4">{t('about.expertise')}</p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground inline-block bg-gradient-to-r from-sage/10 to-gold/10 px-6 py-2 rounded-xl">
-              {t('about.topSkills')}
-            </h2>
-          </motion.div>
-
-          <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-border/50 hover:border-sage/30 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] min-w-[300px]"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center group-hover:bg-sage/20 transition-colors flex-shrink-0">
-                    <skill.icon className="w-6 h-6 text-sage" />
-                  </div>
-                  <p className="font-body text-foreground leading-relaxed flex-1">{skill.text}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Career History */}
       <section className="py-20 bg-white">
@@ -487,7 +441,6 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <p className="text-sage font-body text-sm uppercase tracking-[0.2em] mb-4">{t('about.experience')}</p>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground inline-block bg-gradient-to-r from-sage/10 to-gold/10 px-6 py-2 rounded-xl">
               {t('about.careerHistory')}
             </h2>

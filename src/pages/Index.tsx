@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronDown, Users, Building2, Award, GraduationCap, Rocket, Heart, Trophy, Megaphone, Lightbulb, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
+import { ArrowRight, ChevronDown, Users, Building2, Award, GraduationCap, Rocket, Heart, Trophy, Megaphone, Lightbulb, Twitter, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -188,39 +188,39 @@ const Index = () => {
                         />
 
                         {/* Social Icons */}
-                        <div className="flex justify-center gap-6 mt-12 relative z-30">
-                          <motion.a
+                        <div className="flex justify-center gap-6 mt-12 relative z-50">
+                          <a
                             href="https://x.com/AnanthAyyasamy"
                             target="_blank"
-                            whileHover={{ y: -8, scale: 1.15 }}
-                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
+                            rel="noopener noreferrer"
+                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
                           >
                             <Twitter size={24} fill="currentColor" />
-                          </motion.a>
-                          <motion.a
-                            href="https://facebook.com/ananthan.ayyasamy"
+                          </a>
+                          <a
+                            href="https://www.facebook.com/profile.php?id=100091498852259"
                             target="_blank"
-                            whileHover={{ y: -8, scale: 1.15 }}
-                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
+                            rel="noopener noreferrer"
+                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
                           >
                             <Facebook size={24} fill="currentColor" />
-                          </motion.a>
-                          <motion.a
-                            href="https://instagram.com/ananthan_ayyasamy"
+                          </a>
+                          <a
+                            href="https://www.instagram.com/tenkasi_ananthan/"
                             target="_blank"
-                            whileHover={{ y: -8, scale: 1.15 }}
-                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
+                            rel="noopener noreferrer"
+                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
                           >
                             <Instagram size={24} />
-                          </motion.a>
-                          <motion.a
-                            href="https://youtube.com/@ananthanayyasamy"
+                          </a>
+                          <a
+                            href="https://www.linkedin.com/in/ananthan/"
                             target="_blank"
-                            whileHover={{ y: -8, scale: 1.15 }}
-                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
+                            rel="noopener noreferrer"
+                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
                           >
-                            <Youtube size={24} fill="currentColor" />
-                          </motion.a>
+                            <Linkedin size={24} fill="currentColor" />
+                          </a>
                         </div>
                       </motion.div>
                     </div>

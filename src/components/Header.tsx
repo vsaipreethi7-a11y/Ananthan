@@ -149,6 +149,25 @@ const Header = () => {
                   </motion.div>
                 ))}
               </nav>
+              {/* Language Toggle in Mobile Menu */}
+              <div className="mt-8 flex justify-center gap-3">
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors ${
+                    language === 'en' ? 'bg-gold text-foreground' : 'bg-cream/20 text-cream'
+                  }`}
+                >
+                  English
+                </button>
+                <button
+                  onClick={() => setLanguage('ta')}
+                  className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors ${
+                    language === 'ta' ? 'bg-gold text-foreground' : 'bg-cream/20 text-cream'
+                  }`}
+                >
+                  தமிழ்
+                </button>
+              </div>
             </div>
           </motion.div>
         )}
