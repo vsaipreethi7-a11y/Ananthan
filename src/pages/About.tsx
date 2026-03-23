@@ -19,8 +19,8 @@ import {
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import { useLanguage } from "@/contexts/LanguageContext";
-import ananthanImage from "@/assets/about_profile.jpg";
-import ananthan1Img from "@/assets/Ananthan1.jpg";
+import ananthanImage from "@/assets/about_profile_nobg.png";
+import ananthan1Img from "@/assets/Ananthan1_nobg.png";
 
 // Journey images
 import born from "@/assets/Journey/Born.jpg";

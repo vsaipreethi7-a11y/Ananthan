@@ -4,7 +4,7 @@ import { ArrowRight, ChevronDown, Users, Building2, Award, GraduationCap, Rocket
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { useLanguage } from "@/contexts/LanguageContext";
-import ananthanImage from "@/assets/Ananthan1.jpg";
+import ananthanImage from "@/assets/Ananthan1_nobg.png";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
@@ -14,7 +14,7 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 
-import heroProfile from "@/assets/hero/Ananthan.jpg";
+import heroProfile from "@/assets/hero/Ananthan.png";
 import oneNationImg from "@/assets/hero/ONE NATION ONE DREAM.jpg";
 import drugFreeImg from "@/assets/hero/DRUG FREE TENKASKI.jpg";
 import startupImg from "@/assets/hero/startup_tenkasi.jpg";
