@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
 import { Rocket, Building, Train, Leaf, Factory, Plane, GraduationCap, Heart, Users, BookOpen, Trophy, Target, Sparkles, Droplet, Zap, TrendingUp } from "lucide-react";
 import Layout from "@/components/Layout";
-import visionImg from "@/assets/vision.png";
+import visionImg from "@/assets/vision.jpg";
 
 // Import all initiative images
 import oneNationImg from "@/assets/hero/ONE NATION ONE DREAM.jpg";
-import tenSemiImg from "@/assets/Journey/Silicon_Startup.png";
+import tenSemiImg from "@/assets/Journey/Silicon_Startup.jpg";
 import drugFreeImg from "@/assets/hero/DRUG FREE TENKASKI.jpg";
 import vaazhaiImg from "@/assets/vaazhai.png";
-import startupSummitImg from "@/assets/hero/startup_tenkasi.png";
-import neetImg from "@/assets/hero/youth.png";
+import startupSummitImg from "@/assets/hero/startup_tenkasi.jpg";
+import neetImg from "@/assets/hero/youth.jpg";
 import spaceImg from "@/assets/space science bootcamp.jpg";
-import welfareImg from "@/assets/hero/MODI WELFARE CAMPS .png";
-import waterImg from "@/assets/impact.png";
+import welfareImg from "@/assets/hero/MODI WELFARE CAMPS .jpg";
+import waterImg from "@/assets/impact.jpg";
 import womenImg from "@/assets/women empowerment.jpg";
 import toiletImg from "@/assets/smart toilet.jpg";
-import libraryImg from "@/assets/media.png";
+import libraryImg from "@/assets/media.jpg";
 
 // Import Vision Pillars images
 import pillarJobs from "@/assets/initiatives/one lakh high tech jobs .jpg";

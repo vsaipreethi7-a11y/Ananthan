@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import { TrendingUp, Users, Target, Award, BookOpen, Trophy, Heart } from "lucide-react";
 import Layout from "@/components/Layout";
-import impactImg from "@/assets/impact.png";
+import impactImg from "@/assets/impact.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import event images
-import meetImg from "@/assets/Journey/bjp_district_president.png";
+import meetImg from "@/assets/Journey/bjp_district_president.jpg";
 import drugFreeImg from "@/assets/hero/DRUG FREE TENKASKI.jpg";
 import oneNationImg from "@/assets/hero/ONE NATION ONE DREAM.jpg";
-import yatraImg from "@/assets/Journey/En_mann_en_makkal.png";
-import visitImg from "@/assets/Journey/joined_bjp.png";
-import startupImg from "@/assets/hero/startup_tenkasi.png";
+import yatraImg from "@/assets/Journey/En_mann_en_makkal.jpg";
+import visitImg from "@/assets/Journey/joined_bjp.jpg";
+import startupImg from "@/assets/hero/startup_tenkasi.jpg";
 
 // New Impact Images
-import impact1Img from "@/assets/impacts/1.png";
+import impact1Img from "@/assets/impacts/1.jpg";
 import impact2Img from "@/assets/impacts/2.jpg";
 
 const Impact = () => {

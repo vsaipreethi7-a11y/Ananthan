@@ -19,25 +19,25 @@ import {
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import { useLanguage } from "@/contexts/LanguageContext";
-import ananthanImage from "@/assets/about_profile.png";
-import ananthan1Img from "@/assets/Ananthan1.png";
+import ananthanImage from "@/assets/about_profile.jpg";
+import ananthan1Img from "@/assets/Ananthan1.jpg";
 
 // Journey images
-import born from "@/assets/Journey/Born.png";
-import adversity from "@/assets/Journey/adversity.jpg";
-import nitTrichy from "@/assets/Journey/Nit_Trichy.png";
-import siliconStartup from "@/assets/Journey/Silicon_Startup.png";
-import intel from "@/assets/Journey/intel.png";
-import politicalSteward from "@/assets/Journey/En_mann_en_makkal.png";
-import joinedBjp from "@/assets/Journey/joined_bjp.png";
-import voiceOfTenkasi from "@/assets/Journey/Voice_of_Tenkasi.png";
-import prideOfIndia from "@/assets/Journey/Pride_of_India.png";
-import startupTenkasi from "@/assets/Journey/startup_tenkasi.png";
-import governorVisit from "@/assets/Journey/governor_visit.png";
-import enMannMakkal from "@/assets/Journey/En_mann_en_makkal.png";
-import bjpPresident from "@/assets/Journey/bjp_district_president.png";
+import born from "@/assets/Journey/Born.jpg";
+import adversity from "@/assets/Journey/adversity_tmp.jpg";
+import nitTrichy from "@/assets/Journey/Nit_Trichy.jpg";
+import siliconStartup from "@/assets/Journey/Silicon_Startup.jpg";
+import intel from "@/assets/Journey/intel.jpg";
+import politicalSteward from "@/assets/Journey/En_mann_en_makkal.jpg";
+import joinedBjp from "@/assets/Journey/joined_bjp.jpg";
+import voiceOfTenkasi from "@/assets/Journey/Voice_of_Tenkasi.jpg";
+import prideOfIndia from "@/assets/Journey/Pride_of_India.jpg";
+import startupTenkasi from "@/assets/Journey/startup_tenkasi.jpg";
+import governorVisit from "@/assets/Journey/governor_visit.jpg";
+import enMannMakkal from "@/assets/Journey/En_mann_en_makkal.jpg";
+import bjpPresident from "@/assets/Journey/bjp_district_president.jpg";
 import oneNation from "@/assets/hero/ONE NATION ONE DREAM.jpg";
-import megaRally from "@/assets/Journey/governor_visit.png";
+import megaRally from "@/assets/Journey/governor_visit.jpg";
 
 
 const careerHistory = [

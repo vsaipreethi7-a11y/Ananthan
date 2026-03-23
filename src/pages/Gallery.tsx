@@ -214,7 +214,7 @@ const Gallery = () => {
                     {/* Download Button */}
                     <a
                       href={image.src}
-                      download={`ananthan-gallery-${image.id}.png`}
+                      download={`ananthan-gallery-${image.id}.jpg`}
                       className="absolute top-2 right-2 z-20 p-2 bg-sage/80 hover:bg-sage text-cream rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       onClick={(e) => e.stopPropagation()}
                       title="Download Photo"
@@ -248,7 +248,7 @@ const Gallery = () => {
               {/* Download Button */}
               <a
                 href={selectedImage.src}
-                download={`ananthan-gallery-${selectedImage.id}.png`}
+                download={`ananthan-gallery-${selectedImage.id}.jpg`}
                 className="text-cream hover:text-gold transition-colors p-2"
                 onClick={(e) => e.stopPropagation()}
                 title="Download Photo"
