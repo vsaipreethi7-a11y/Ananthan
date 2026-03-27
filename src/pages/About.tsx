@@ -271,14 +271,14 @@ const About = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-left order-2 lg:order-1"
+              className="text-center lg:text-left order-2 lg:order-1"
             >
-              <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight whitespace-nowrap">
                 <span>{t('about.title').split(' ')[0]}</span>{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">{t('about.title').split(' ').slice(1).join(' ')}</span>
               </h1>
-              <div className="w-48 h-1.5 bg-gold mb-10 rounded-full" />
-              <div className="space-y-4 font-body text-lg text-muted-foreground leading-relaxed">
+              <div className="w-32 md:w-48 h-1 md:h-1.5 bg-gold mb-6 md:10 rounded-full mx-auto lg:mx-0" />
+              <div className="space-y-4 font-body text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>{t('about.p1')}</p>
                 <p>{t('about.p2')}</p>
                 <p>{t('about.p3')}</p>
@@ -315,8 +315,8 @@ const About = () => {
         {/* Timeline Navigation - Integrated from Journey Page */}
         <section className="bg-white/80 backdrop-blur-md border-b border-border z-40 shadow-sm transition-all duration-300">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="pt-8 pb-0 text-center">
-              <h2 className="font-display text-4xl text-foreground inline-block bg-gradient-to-r from-sage/10 to-gold/10 px-8 py-2 rounded-xl mb-8 border-b-0">{t('about.journey')}</h2>
+            <div className="pt-6 md:pt-8 pb-0 text-center">
+              <h2 className="font-display text-2xl md:text-4xl text-foreground inline-block bg-gradient-to-r from-sage/10 to-gold/10 px-6 py-2 rounded-xl mb-6 md:8 border-b-0">{t('about.journey')}</h2>
 
               {/* Timeline Strip */}
               <div className="w-full overflow-x-auto relative px-4 no-scrollbar">
@@ -373,7 +373,7 @@ const About = () => {
                 transition={{ duration: 0.5, ease: "circOut" }}
                 className="max-w-6xl mx-auto"
               >
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center bg-white/40 backdrop-blur-sm p-6 md:p-12 rounded-3xl border border-white/50 shadow-xl">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center bg-white/40 backdrop-blur-sm p-4 md:p-12 rounded-2xl md:rounded-3xl border border-white/50 shadow-xl">
 
                   {/* Image Section - Left */}
                   <div className="relative group perspective-1000 w-full max-w-[300px] md:max-w-sm mx-auto lg:mx-0">
@@ -403,12 +403,12 @@ const About = () => {
                     </motion.div>
 
                     {/* Title & Description */}
-                    <div className="relative z-10 space-y-6">
-                      <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-tight">
+                    <div className="relative z-10 space-y-4 md:space-y-6">
+                      <h2 className="font-display text-2xl md:text-5xl font-bold text-foreground leading-tight">
                         {activeItem.title}
                       </h2>
 
-                      <p className="text-muted-foreground text-lg md:text-xl leading-relaxed text-left border-l-4 border-gold/30 pl-6">
+                      <p className="text-muted-foreground text-sm md:text-xl leading-relaxed text-left border-l-4 border-gold/30 pl-4 md:pl-6">
                         {activeItem.description}
                       </p>
                     </div>
@@ -439,9 +439,9 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
           >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground inline-block bg-gradient-to-r from-sage/10 to-gold/10 px-6 py-2 rounded-xl">
+            <h2 className="font-display text-2xl md:text-5xl font-bold text-foreground inline-block bg-gradient-to-r from-sage/10 to-gold/10 px-6 py-2 rounded-xl">
               {t('about.careerHistory')}
             </h2>
           </motion.div>
@@ -454,18 +454,18 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-                className="group bg-white relative overflow-hidden p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-border hover:border-sage/50"
+                className="group bg-white relative overflow-hidden p-5 md:p-8 rounded-xl md:rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-border hover:border-sage/50"
               >
                 <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-sage to-sage/50" />
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sage/5 rounded-full blur-3xl -mr-16 -mt-16 transition-all group-hover:bg-sage/10" />
 
                 <div className="flex flex-col md:flex-row gap-6 items-start relative z-10">
-                  <div className="w-16 h-16 bg-sage/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <job.icon className="w-8 h-8 text-sage" />
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-sage/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <job.icon className="w-6 h-6 md:w-8 md:h-8 text-sage" />
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
-                      <h3 className="font-display text-2xl font-bold text-foreground group-hover:text-sage transition-colors">{job.role}</h3>
+                      <h3 className="font-display text-xl md:text-2xl font-bold text-foreground group-hover:text-sage transition-colors">{job.role}</h3>
                       <span className="inline-block bg-cream text-sage-dark px-4 py-1 rounded-full text-sm font-semibold border border-sage/10">
                         {job.period}
                       </span>
@@ -521,13 +521,13 @@ const About = () => {
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-sage/5 to-gold/5 rounded-full blur-2xl -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-700" />
 
-                <div className="flex items-start gap-5 relative z-10">
-                  <div className="w-14 h-14 bg-sage/5 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-sage text-sage group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:rotate-3">
-                    <Speaker className="w-7 h-7" />
+                <div className="flex items-start gap-4 md:gap-5 relative z-10">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-sage/5 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-sage text-sage group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:rotate-3">
+                    <Speaker className="w-6 h-6 md:w-7 md:h-7" />
                   </div>
                   <div className="flex-1 space-y-1">
-                    <h3 className="font-display text-2xl font-bold text-foreground group-hover:text-sage transition-colors leading-tight">{position.role}</h3>
-                    <p className="text-sage-dark font-medium text-lg border-l-2 border-gold/40 pl-3 mb-3">{position.organization}</p>
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-foreground group-hover:text-sage transition-colors leading-tight">{position.role}</h3>
+                    <p className="text-sage-dark font-medium text-base md:text-lg border-l-2 border-gold/40 pl-3 mb-3">{position.organization}</p>
 
                     <div className="flex flex-wrap items-center justify-between gap-3 mt-4 pt-2 border-t border-gray-100/50">
                       <div className="text-muted-foreground text-xs font-bold tracking-wider uppercase bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100 group-hover:border-sage/20 transition-colors">

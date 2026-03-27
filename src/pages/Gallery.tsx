@@ -240,71 +240,82 @@ const Gallery = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-foreground/95 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-2 md:p-4"
             onClick={closeLightbox}
           >
             {/* Top Bar Controls */}
-            <div className="absolute top-4 right-4 z-10 flex items-center gap-4">
+            <div className="absolute top-4 right-4 z-[60] flex items-center gap-2 md:gap-4">
               {/* Download Button */}
               <a
                 href={selectedImage.src}
                 download={`ananthan-gallery-${selectedImage.id}.jpg`}
-                className="text-cream hover:text-gold transition-colors p-2"
+                className="text-cream hover:text-gold transition-colors p-2 md:p-3 bg-black/20 backdrop-blur-md rounded-full"
                 onClick={(e) => e.stopPropagation()}
                 title="Download Photo"
               >
-                <Download size={32} />
+                <Download className="w-6 h-6 md:w-8 md:h-8" />
               </a>
 
               {/* Close Button */}
               <button
-                className="text-cream hover:text-gold transition-colors p-2"
+                className="text-cream hover:text-gold transition-colors p-2 md:p-3 bg-black/20 backdrop-blur-md rounded-full"
                 onClick={closeLightbox}
               >
-                <X size={32} />
+                <X className="w-6 h-6 md:w-8 md:h-8" />
               </button>
             </div>
 
-            {/* Previous Button */}
+            {/* Navigation Buttons - Hidden on very small screens or made more subtle */}
             <button
-              className="absolute left-1 md:left-4 top-1/2 -translate-y-1/2 text-cream hover:text-gold transition-colors z-10 p-1 md:p-2"
+              className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-cream hover:text-gold transition-colors z-[60] p-2 bg-black/20 backdrop-blur-md rounded-full hidden sm:block"
               onClick={(e) => {
                 e.stopPropagation();
                 navigateImage("prev");
               }}
             >
-              <ChevronLeft size={28} className="md:w-10 md:h-10" />
+              <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
             </button>
 
-            {/* Next Button */}
             <button
-              className="absolute right-1 md:right-4 top-1/2 -translate-y-1/2 text-cream hover:text-gold transition-colors z-10 p-1 md:p-2"
+              className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-cream hover:text-gold transition-colors z-[60] p-2 bg-black/20 backdrop-blur-md rounded-full hidden sm:block"
               onClick={(e) => {
                 e.stopPropagation();
                 navigateImage("next");
               }}
             >
-              <ChevronRight size={28} className="md:w-10 md:h-10" />
+              <ChevronRight className="w-8 h-8 md:w-10 md:h-10" />
             </button>
 
-            {/* Image */}
+            {/* Mobile Swipe Simulation / Taps for Navigation */}
+            <div className="absolute inset-y-0 left-0 w-1/4 z-50 sm:hidden" onClick={(e) => { e.stopPropagation(); navigateImage("prev"); }} />
+            <div className="absolute inset-y-0 right-0 w-1/4 z-50 sm:hidden" onClick={(e) => { e.stopPropagation(); navigateImage("next"); }} />
+
+            {/* Image & Info Container */}
             <motion.div
               key={selectedImage.id}
-              initial={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="max-w-5xl w-full flex flex-col items-center px-2"
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="w-full max-w-5xl flex flex-col items-center px-2 py-10"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={selectedImage.src}
-                alt={selectedImage.title}
-                className="w-full max-h-[55vh] md:max-h-[70vh] object-contain rounded-sm"
-              />
-              <div className="mt-3 md:mt-6 p-4 md:p-6 bg-background/90 text-center rounded-xl shadow-2xl max-w-3xl w-full border border-border/50 backdrop-blur-sm">
-                <h3 className="text-lg md:text-2xl font-display font-bold text-foreground mb-1 md:mb-3">{selectedImage.title}</h3>
-                <p className="text-muted-foreground font-body text-sm md:text-base">{selectedImage.description}</p>
+              <div className="relative w-full flex items-center justify-center">
+                <img
+                  src={selectedImage.src}
+                  alt={selectedImage.title}
+                  className="max-w-full max-h-[65vh] md:max-h-[75vh] object-contain rounded shadow-2xl"
+                />
+              </div>
+              
+              <div className="mt-4 md:mt-8 p-4 md:p-8 bg-white/10 backdrop-blur-xl text-center rounded-2xl shadow-2xl max-w-3xl w-full border border-white/20">
+                <h3 className="text-lg md:text-3xl font-display font-bold text-cream mb-2 md:mb-4">{selectedImage.title}</h3>
+                <p className="text-cream/80 font-body text-sm md:text-xl leading-relaxed">{selectedImage.description}</p>
+                
+                {/* Mobile indicators for navigation */}
+                <div className="flex justify-center gap-2 mt-4 sm:hidden">
+                  <div className="text-[10px] text-cream/40 uppercase tracking-widest font-bold">Tap edges to navigate</div>
+                </div>
               </div>
             </motion.div>
           </motion.div>

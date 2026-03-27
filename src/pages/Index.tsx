@@ -12,6 +12,7 @@ import {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  CarouselDots,
 } from "@/components/ui/carousel";
 
 import heroProfile from "@/assets/hero/Ananthan.png";
@@ -20,6 +21,12 @@ import drugFreeImg from "@/assets/hero/DRUG FREE TENKASKI.jpg";
 import startupImg from "@/assets/hero/startup_tenkasi.jpg";
 import welfareImg from "@/assets/hero/MODI WELFARE CAMPS .jpg";
 import heroVision from "@/assets/hero/vision.jpg";
+import banner1 from "@/assets/banner/1.png";
+import banner2 from "@/assets/banner/2.png";
+import banner3 from "@/assets/banner/3.png";
+import banner4 from "@/assets/banner/4.png";
+import banner5 from "@/assets/banner/5.png";
+import banner6 from "@/assets/banner/6.png";
 
 
 const stats = [
@@ -71,44 +78,44 @@ const heroSliders = [
   {
     subtitle: "BJP TENKASI DISTRICT PRESIDENT",
     title: "Ananthan Ayyasamy",
-    description: "Bringing Tech Leadership to Politics — A remarkable journey of resilience, excellence, and service from an agricultural labourer's son to Intel Engineering Director in USA. Now dedicated to transforming rural India as a grassroots political leader, envisioning One Lakh Hi-Tech Jobs in Tenkasi by 2032.",
-    image: heroProfile,
-    bgColor: "bg-sage/10",
+    description: "Bringing Tech Leadership to Politics — A remarkable journey of resilience, excellence, and service from an agricultural labourer's son to Intel Engineering Director. Now dedicated to transforming rural India as a grassroots political leader.",
+    image: banner1,
+    badge: "Public Service Leader"
   },
   {
     subtitle: "Tech & Innovation",
-    title: "Tech & Innovation",
-    description: "Empowering the next generation of technology through leadership in semiconductor design, analytics, and cutting-edge solutions.",
-    image: heroProfile,
-    bgColor: "bg-blue-50/50",
+    title: "Global Tech Visionary",
+    description: "Empowering the next generation with 20+ years of semiconductor expertise. Bringing Silicon Valley excellence to the heart of Tenkasi to create 1 Lakh Hi-Tech jobs by 2032.",
+    image: banner2,
+    badge: "20+ Years Tech Exp"
   },
   {
     subtitle: "Entrepreneur & Strategist",
-    title: "Entrepreneurship Meets Strategy",
-    description: "Director of multiple high-impact companies focused on analytics, semiconductor technology, and strategic business innovation.",
-    image: heroProfile,
-    bgColor: "bg-orange-50/50",
+    title: "Strategy Meets Service",
+    description: "Driving growth through analytics and business innovation. Building self-sustained village economies that bridge the gap between rural and urban India.",
+    image: banner3,
+    badge: "Business Strategist"
   },
   {
-    subtitle: "Social Impact & Public Service",
+    subtitle: "Social Impact & Reform",
     title: "Driving Social Change",
-    description: "Committed to community growth, sustainable development, and creating opportunities for all through thoughtful leadership.",
-    image: heroProfile,
-    bgColor: "bg-purple-50/50",
+    description: "Committed to deep community growth and drug-free initiatives. Dedicated to creating sustainable opportunities through thoughtful, compassionate leadership.",
+    image: banner4,
+    badge: "Social Reformer"
   },
   {
     subtitle: "Political Engagement",
     title: "A Leader for the People",
-    description: "Serving and shaping public policy with purpose — building bridges between technology and governance.",
-    image: heroProfile,
-    bgColor: "bg-green-50/50",
+    description: "Shaping public policy with a purpose. Building robust bridges between high-end technology and effective governance to serve every citizen.",
+    image: banner5,
+    badge: "People's Voice"
   },
   {
     subtitle: "Global Perspectives",
     title: "Think Global, Act Local",
-    description: "Bridging global technology standards with local community needs — expanding horizons for future generations.",
-    image: heroProfile,
-    bgColor: "bg-gold/10",
+    description: "Implementing international standards in local development. Envisioning Tenkasi as the 'Estonia of Asia' through modern R&D and digital infrastructure.",
+    image: banner6,
+    badge: "Future Ready"
   },
 ];
 
@@ -119,7 +126,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-auto lg:min-h-[95vh] flex lg:items-center bg-sage/5 lg:overflow-hidden">
+      <section className="relative min-h-[65vh] flex items-center bg-[#566039] overflow-hidden">
         {/* Background Pattern - Global to section */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute inset-0" style={{
@@ -135,92 +142,63 @@ const Index = () => {
           <CarouselContent>
             {heroSliders.map((slide, index) => (
               <CarouselItem key={index}>
-                <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-6 pb-12 md:py-20">
-                  <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 lg:items-center">
+                <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 relative z-10 pt-8 pb-16 md:pt-12 md:pb-20 flex items-center min-h-[60vh] md:min-h-[65vh]">
+                  <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center justify-between w-full">
 
                     {/* Left Column: Text Content */}
-                    <div className="order-2 lg:order-1 h-full min-h-0 lg:min-h-[450px] flex flex-col justify-center pb-12 lg:pb-0">
+                    <div className="order-2 lg:order-1 flex flex-col justify-center text-center lg:text-left">
                       <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-left pr-4"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="relative z-20"
                       >
-                        <p className="text-sage font-body text-sm uppercase tracking-[0.2em] mb-4 font-bold">
+                        {/* Decorative Badge */}
+                        <motion.span 
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 0.2 }}
+                          className="inline-block px-4 py-1.5 mb-6 bg-gold/10 backdrop-blur-md border border-gold/30 text-gold rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest"
+                        >
+                          {slide.badge || "BJP Tenkasi"}
+                        </motion.span>
+
+                        <p className="text-cream/60 font-body text-[10px] md:text-xs uppercase tracking-[0.25em] mb-4 font-bold">
                           {slide.subtitle}
                         </p>
-                        <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-semibold text-foreground leading-tight mb-6">
+                        
+                        <h1 className="font-display text-2xl md:text-4xl lg:text-7xl font-bold text-cream leading-[1.2] lg:leading-[1.1] mb-6 drop-shadow-sm whitespace-nowrap">
                           {slide.title}
                         </h1>
-                        <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
+
+                        <div className="w-12 md:w-16 h-1 bg-gold mb-8 rounded-full mx-auto lg:mx-0"></div>
+
+                        <p className="font-body text-xs md:text-base lg:text-lg text-cream/80 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
                           {slide.description}
                         </p>
-                        <div className="flex flex-wrap gap-4">
-                          <Button asChild size="lg" className="bg-sage hover:bg-sage-dark text-white rounded-full px-8 h-12">
-                            <Link to="/vision">{t('nav.vision')} <ArrowRight className="ml-2 w-4 h-4" /></Link>
-                          </Button>
-                          <Button asChild variant="outline" size="lg" className="border-sage text-sage hover:bg-sage/5 rounded-full px-8 h-12">
-                            <Link to="/about">{t('nav.about')}</Link>
-                          </Button>
-                        </div>
                       </motion.div>
-
-                      {/* Navigation Buttons */}
-                      <div className="flex gap-3 mt-10">
-                        <CarouselPrevious className="static translate-y-0 h-11 w-11 border-sage/20 hover:bg-sage hover:text-white" />
-                        <CarouselNext className="static translate-y-0 h-11 w-11 border-sage/20 hover:bg-sage hover:text-white" />
-                      </div>
                     </div>
 
-                    {/* Right Column: Image & Social Icons */}
-                    <div className="order-1 lg:order-2 flex flex-col items-center">
+                    {/* Right Column: Image */}
+                    <div className="order-1 lg:order-2 flex flex-col items-center justify-center relative">
+                      {/* Interactive Glow Behind Image */}
+                      <div className="absolute inset-0 bg-gold/5 blur-[80px] md:blur-[100px] rounded-full"></div>
+                      
                       <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}
-                        className="relative w-full max-w-xl mt-0 md:-mt-20 lg:-mt-28 pt-8 md:pt-0"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1, ease: "circOut" }}
+                        className="relative w-full flex flex-col items-center"
                       >
-                        <img
-                          src={slide.image || heroProfile}
-                          alt={slide.title}
-                          className="w-full h-auto object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] z-20 relative transition-transform duration-700"
-                          loading="eager"
-                        />
-
-                        {/* Social Icons */}
-                        <div className="flex justify-center gap-6 mt-12 relative z-50">
-                          <a
-                            href="https://x.com/AnanthAyyasamy"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
-                          >
-                            <Twitter size={24} fill="currentColor" />
-                          </a>
-                          <a
-                            href="https://www.facebook.com/profile.php?id=100091498852259"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
-                          >
-                            <Facebook size={24} fill="currentColor" />
-                          </a>
-                          <a
-                            href="https://www.instagram.com/tenkasi_ananthan/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
-                          >
-                            <Instagram size={24} />
-                          </a>
-                          <a
-                            href="https://www.linkedin.com/in/ananthan/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center text-sage border border-sage/20 hover:bg-gold hover:text-white hover:border-gold transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
-                          >
-                            <Linkedin size={24} fill="currentColor" />
-                          </a>
+                        <div className="relative z-20 w-full flex justify-center items-end h-[220px] md:h-[380px] lg:h-[500px]">
+                          <img
+                            src={slide.image}
+                            alt={slide.title}
+                            className={`max-w-[90%] md:max-w-full h-full object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-transform duration-1000 ${
+                              index === 4 ? "scale-[0.8]" : index === 5 ? "scale-95" : "scale-[0.9]"
+                            }`}
+                            loading="eager"
+                          />
                         </div>
                       </motion.div>
                     </div>
@@ -230,6 +208,13 @@ const Index = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
+          
+          {/* Bottom navigation controls */}
+          <div className="absolute bottom-6 left-0 right-0 z-50 flex items-center justify-center pointer-events-none">
+            <div className="flex-shrink-0 pointer-events-auto">
+              <CarouselDots />
+            </div>
+          </div>
         </Carousel>
       </section>
 
@@ -279,21 +264,21 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white overflow-hidden border-y border-border/50">
+      <section className="py-12 md:py-20 bg-white overflow-hidden border-y border-border/50">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 * 0.1, duration: 0.6 }}
-              className="bg-white border border-sage/10 p-8 rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
+              className="bg-white border border-sage/10 p-4 md:p-8 rounded-xl md:rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
             >
-              <Award className="w-10 h-10 text-gold mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <p className="font-display text-4xl md:text-5xl font-bold text-sage mb-2">
+              <Award className="w-8 h-8 md:w-10 md:h-10 text-gold mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+              <p className="font-display text-2xl md:text-5xl font-bold text-sage mb-1 md:mb-2">
                 5+
               </p>
-              <p className="font-body text-muted-foreground text-sm uppercase tracking-wider font-medium">
+              <p className="font-body text-muted-foreground text-[10px] md:text-sm uppercase tracking-wider font-medium">
                 {t('stats.patents')}
               </p>
             </motion.div>
@@ -305,11 +290,11 @@ const Index = () => {
               transition={{ delay: 1 * 0.1, duration: 0.6 }}
               className="bg-white border border-sage/10 p-8 rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
             >
-              <Lightbulb className="w-10 h-10 text-gold mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <p className="font-display text-4xl md:text-5xl font-bold text-sage mb-2">
+              <Lightbulb className="w-8 h-8 md:w-10 md:h-10 text-gold mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+              <p className="font-display text-2xl md:text-5xl font-bold text-sage mb-1 md:mb-2">
                 20+
               </p>
-              <p className="font-body text-muted-foreground text-sm uppercase tracking-wider font-medium">
+              <p className="font-body text-muted-foreground text-[10px] md:text-sm uppercase tracking-wider font-medium">
                 {t('stats.experience')}
               </p>
             </motion.div>
@@ -321,11 +306,11 @@ const Index = () => {
               transition={{ delay: 2 * 0.1, duration: 0.6 }}
               className="bg-white border border-sage/10 p-8 rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
             >
-              <GraduationCap className="w-10 h-10 text-gold mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <p className="font-display text-4xl md:text-5xl font-bold text-sage mb-2">
+              <GraduationCap className="w-8 h-8 md:w-10 md:h-10 text-gold mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+              <p className="font-display text-2xl md:text-5xl font-bold text-sage mb-1 md:mb-2">
                 1,00,000+
               </p>
-              <p className="font-body text-muted-foreground text-sm uppercase tracking-wider font-medium">
+              <p className="font-body text-muted-foreground text-[10px] md:text-sm uppercase tracking-wider font-medium">
                 {t('stats.students')}
               </p>
             </motion.div>
@@ -337,11 +322,11 @@ const Index = () => {
               transition={{ delay: 3 * 0.1, duration: 0.6 }}
               className="bg-white border border-sage/10 p-8 rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
             >
-              <Building2 className="w-10 h-10 text-gold mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <p className="font-display text-4xl md:text-5xl font-bold text-sage mb-2">
+              <Building2 className="w-8 h-8 md:w-10 md:h-10 text-gold mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+              <p className="font-display text-2xl md:text-5xl font-bold text-sage mb-1 md:mb-2">
                 250+
               </p>
-              <p className="font-body text-muted-foreground text-sm uppercase tracking-wider font-medium">
+              <p className="font-body text-muted-foreground text-[10px] md:text-sm uppercase tracking-wider font-medium">
                 {t('stats.camps')}
               </p>
             </motion.div>
@@ -364,12 +349,12 @@ const Index = () => {
               transition={{ duration: 0.6 }}
               className="lg:sticky lg:top-32"
             >
-              <p className="text-sage font-body text-sm uppercase tracking-[0.2em] mb-6">{t('about.journey')}</p>
-              <h2 className="font-display text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
-                From Village <br /> to Global Tech <br />
+              <p className="text-sage font-body text-sm uppercase tracking-[0.2em] mb-4 md:mb-6">{t('about.journey')}</p>
+              <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-4 md:mb-6 leading-tight">
+                From Village <br className="hidden md:block" /> to Global Tech <br className="hidden md:block" />
                 <span className="text-sage">Back to Grassroots</span>
               </h2>
-              <p className="font-body text-lg text-muted-foreground mb-8 leading-relaxed">
+              <p className="font-body text-base md:text-lg text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                 A remarkable journey of resilience, excellence, and service — from agricultural labourer's son
                 to Intel Director, now dedicated to transforming rural India.
               </p>
@@ -445,22 +430,22 @@ const Index = () => {
                   <img
                     src={initiative.image}
                     alt={initiative.title}
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-contain md:object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
 
                 {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 transform translate-y-2 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                   {/* Title */}
-                  <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-3 drop-shadow-md">
+                  <h3 className="font-display text-xl md:text-3xl font-bold text-white mb-2 md:mb-3 drop-shadow-md">
                     {initiative.title}
                   </h3>
 
                   {/* Description (Revealed on Hover) */}
                   <div className="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                    <p className="font-body text-white/90 leading-relaxed text-lg drop-shadow-sm">
+                    <p className="font-body text-white/90 leading-relaxed text-sm md:text-lg drop-shadow-sm">
                       {initiative.description}
                     </p>
                   </div>
@@ -505,12 +490,12 @@ const Index = () => {
 
               <div className="relative z-10 text-center">
                 <div className="text-gold text-6xl font-display mb-6 opacity-80"></div>
-                <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl text-cream leading-relaxed mb-10">
+                <blockquote className="font-display text-lg md:text-3xl lg:text-4xl text-cream leading-relaxed mb-6 md:mb-10">
                   Transforming rural Tenkasi into the <span className="text-gold">Estonia of Asia</span> by 2032
                   with R&D centres in every district, electric trains to every panchayat,
                   and self-sustained villages for all.
                 </blockquote>
-                <p className="font-body text-gold text-lg font-medium tracking-widest uppercase">Ananthan Ayyasamy</p>
+                <p className="font-body text-gold text-sm md:text-lg font-medium tracking-widest uppercase whitespace-nowrap">Ananthan Ayyasamy</p>
               </div>
             </div>
           </motion.div>

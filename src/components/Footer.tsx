@@ -17,7 +17,6 @@ const Footer = () => {
     { label: t('nav.journey'), path: "/about#journey" },
     { label: t('nav.initiatives'), path: "/initiatives" },
     { label: t('nav.impact'), path: "/impact" },
-    { label: t('nav.vision'), path: "/vision" },
     { label: t('nav.gallery'), path: "/gallery" },
     { label: t('nav.media'), path: "/media" },
     { label: t('nav.connect'), path: "/connect" },
@@ -34,7 +33,7 @@ const Footer = () => {
                 <span className="text-cream font-display font-bold text-xl">A</span>
               </div>
               <div>
-                <h3 className="font-display text-2xl font-semibold text-cream">{t('hero.title')}</h3>
+                <h3 className="font-display text-2xl font-semibold text-cream whitespace-nowrap">{t('hero.title')}</h3>
                 <p className="text-cream/70 text-sm font-body">{t('hero.subtitle')}</p>
               </div>
             </div>

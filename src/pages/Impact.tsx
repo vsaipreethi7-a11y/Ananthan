@@ -125,7 +125,7 @@ const Impact = () => {
                 <p className="text-sage font-body text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">{t('impact.badge')}</p>
               </div>
 
-              <h1 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">{t('impact.title')}</span>
               </h1>
 
@@ -172,23 +172,23 @@ const Impact = () => {
               <div className="inline-block bg-sage/10 text-sage px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                 Direct Engagement
               </div>
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Strengthening the <br />
+              <h2 className="font-display text-2xl md:text-5xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
+                Strengthening the <br className="hidden md:block" />
                 <span className="text-sage">Grassroots Presence</span>
               </h2>
-              <p className="text-muted-foreground font-body text-lg leading-relaxed mb-8">
+              <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed mb-6 md:mb-8">
                 True impact is measured by the strength of our connections on the ground. Through regular booth-level meetings, village outreach programs, and direct cadre engagement, we have built a resilient organizational structure across all 7 assembly constituencies.
               </p>
 
               {/* Stat cards inline */}
-              <div className="grid grid-cols-2 gap-4 mb-10">
-                <div className="bg-sage p-6 rounded-2xl text-cream">
-                  <div className="text-3xl font-bold mb-1">2,500+</div>
-                  <div className="text-sm opacity-80 uppercase tracking-widest font-bold">Booth Meetings</div>
+              <div className="grid grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10">
+                <div className="bg-sage p-4 md:p-6 rounded-xl md:rounded-2xl text-cream">
+                   <div className="text-2xl md:text-3xl font-bold mb-1">2,500+</div>
+                   <div className="text-[10px] md:text-sm opacity-80 uppercase tracking-widest font-bold">Booth Meetings</div>
                 </div>
-                <div className="bg-gold p-6 rounded-2xl text-foreground">
-                  <div className="text-3xl font-bold mb-1">1,000+</div>
-                  <div className="text-sm opacity-80 uppercase tracking-widest font-bold">Village Visits</div>
+                <div className="bg-gold p-4 md:p-6 rounded-xl md:rounded-2xl text-foreground">
+                   <div className="text-2xl md:text-3xl font-bold mb-1">1,000+</div>
+                   <div className="text-[10px] md:text-sm opacity-80 uppercase tracking-widest font-bold">Village Visits</div>
                 </div>
               </div>
 
@@ -223,10 +223,10 @@ const Impact = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
               {t('impact.achievedTitle')}
             </h2>
-            <p className="text-muted-foreground font-body text-lg">
+            <p className="text-muted-foreground font-body text-sm md:text-lg">
               {t('impact.achievedDesc')}
             </p>
           </motion.div>
@@ -239,14 +239,14 @@ const Impact = () => {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-cream to-gold/5 p-8 rounded-lg shadow-sm hover:shadow-md transition-all group"
+                className="bg-gradient-to-br from-cream to-gold/5 p-6 md:p-8 rounded-xl md:rounded-lg shadow-sm hover:shadow-md transition-all group"
               >
-                <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-sage/20 transition-colors">
-                  <stat.icon className="w-8 h-8 text-sage" />
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-sage/10 rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:bg-sage/20 transition-colors">
+                  <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-sage" />
                 </div>
-                <div className="text-4xl font-display font-bold text-sage mb-2">{stat.number}</div>
-                <h3 className="text-lg font-display font-semibold text-foreground mb-2">{stat.label}</h3>
-                <p className="text-sm text-muted-foreground">{stat.detail}</p>
+                <div className="text-3xl md:text-4xl font-display font-bold text-sage mb-1 md:mb-2">{stat.number}</div>
+                <h3 className="text-base md:text-lg font-display font-semibold text-foreground mb-1 md:mb-2">{stat.label}</h3>
+                <p className="text-xs md:text-sm text-muted-foreground">{stat.detail}</p>
               </motion.div>
             ))}
           </div>
@@ -299,7 +299,7 @@ const Impact = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group bg-white rounded-xl shadow-sm border border-border hover:shadow-xl transition-all overflow-hidden flex flex-col"
               >
-                <div className="h-48 overflow-hidden relative">
+                <div className="h-40 md:h-48 overflow-hidden relative">
                   <img
                     src={event.image}
                     alt={event.title}
@@ -307,10 +307,10 @@ const Impact = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
-                <div className="p-8 flex-1">
-                  <h3 className="font-display text-xl font-bold text-foreground mb-3 group-hover:text-sage transition-colors">{event.title}</h3>
-                  <div className="text-gold text-2xl font-bold mb-3">{event.stats}</div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{event.detail}</p>
+                <div className="p-6 md:p-8 flex-1">
+                  <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-2 md:mb-3 group-hover:text-sage transition-colors">{event.title}</h3>
+                  <div className="text-gold text-xl md:text-2xl font-bold mb-2 md:mb-3">{event.stats}</div>
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">{event.detail}</p>
                 </div>
               </motion.div>
             ))}

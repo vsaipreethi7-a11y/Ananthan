@@ -23,7 +23,7 @@ const socialPlatforms = [
     name: "Facebook",
     icon: Facebook,
     handle: "Ananthan Ayyasamy",
-    link: "https://facebook.com/ananthan.ayyasamy",
+    link: "https://www.facebook.com/profile.php?id=100091498852259",
     followers: "25K+",
     description: "Event coverage, community stories, and welfare program highlights",
     color: "from-blue-600 to-blue-800"
@@ -31,8 +31,8 @@ const socialPlatforms = [
   {
     name: "Instagram",
     icon: Instagram,
-    handle: "@ananthan_ayyasamy",
-    link: "https://instagram.com/ananthan_ayyasamy",
+    handle: "@tenkasi_ananthan",
+    link: "https://www.instagram.com/tenkasi_ananthan/",
     followers: "15K+",
     description: "Behind-the-scenes moments, rally photos, and youth empowerment content",
     color: "from-pink-500 to-purple-600"

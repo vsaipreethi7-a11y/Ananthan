@@ -255,14 +255,14 @@ const Vision = () => {
               <p className="text-gold font-body text-sm uppercase tracking-[0.2em] font-semibold">{t('vision.badge')}</p>
             </motion.div>
 
-            <h1 className="font-display text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-              <span className="block">{t('vision.title').split(':')[0]}:</span>
+            <h1 className="font-display text-2xl sm:text-3xl md:text-7xl lg:text-8xl font-bold text-white mb-4 md:mb-6 leading-tight">
+              <span className="block">{t('vision.title').split(':')[0]}</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-300 to-gold">
                 {t('vision.title').split(':')[1]}
               </span>
             </h1>
 
-            <p className="font-body text-xl md:text-2xl text-white/95 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="font-body text-base md:text-2xl text-white/95 max-w-4xl mx-auto leading-relaxed mb-6 md:mb-8">
               {t('vision.description')}
             </p>
 
@@ -287,10 +287,10 @@ const Vision = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-3xl md:text-6xl font-bold text-foreground mb-4 md:mb-6">
               {t('vision.pillarsTitle')}
             </h2>
-            <p className="text-muted-foreground font-body text-lg md:text-xl max-w-3xl mx-auto">
+            <p className="text-muted-foreground font-body text-base md:text-xl max-w-3xl mx-auto">
               {t('vision.pillarsDesc')}
             </p>
           </motion.div>
@@ -306,21 +306,21 @@ const Vision = () => {
                 className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border hover:border-sage/30 relative overflow-hidden flex flex-col"
               >
                 {/* Image Section */}
-                <div className="h-56 overflow-hidden relative">
+                <div className="h-48 md:h-56 overflow-hidden relative">
                   <img
                     src={pillar.image}
                     alt={pillar.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
                 </div>
 
                 {/* Content Section */}
-                <div className="p-8 flex-1">
-                  <h3 className="font-display text-xl font-bold text-foreground mb-4 group-hover:text-sage transition-colors">
+                <div className="p-6 md:p-8 flex-1">
+                  <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-3 font-bold group-hover:text-sage transition-colors">
                     {pillar.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>
@@ -414,16 +414,16 @@ const Vision = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="bg-sage-dark/50 backdrop-blur-sm border-2 border-gold/20 rounded-xl p-8"
+                className="bg-sage-dark/50 backdrop-blur-sm border-2 border-gold/20 rounded-xl p-6 md:p-8"
               >
-                <div className="bg-gold text-foreground font-display text-2xl font-bold px-6 py-3 rounded-lg shadow-lg mb-6 inline-block">
+                <div className="bg-gold text-foreground font-display text-xl md:text-2xl font-bold px-4 md:px-6 py-2 md:py-3 rounded-lg shadow-lg mb-4 md:mb-6 inline-block">
                   {milestone.year}
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-3 md:space-y-4">
                   {milestone.goals.map((goal, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <Target className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
-                      <span className="text-cream/95 font-body text-lg">{goal}</span>
+                    <li key={i} className="flex items-start gap-2 md:gap-3">
+                      <Target className="w-4 h-4 md:w-5 md:h-5 text-gold flex-shrink-0 mt-1" />
+                      <span className="text-cream/95 font-body text-base md:text-lg">{goal}</span>
                     </li>
                   ))}
                 </ul>

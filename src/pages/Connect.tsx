@@ -20,7 +20,7 @@ const Connect = () => {
                         className="text-center mb-16"
                     >
                         <p className="text-sage font-body text-sm uppercase tracking-[0.2em] mb-4">Get in Touch</p>
-                        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+                        <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6">
                             Connect with <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">Ananthan</span>
                         </h1>
                         <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto">
@@ -36,8 +36,8 @@ const Connect = () => {
                             transition={{ delay: 0.2, duration: 0.6 }}
                             className="space-y-8"
                         >
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-sage/10 space-y-8">
-                                <h3 className="font-display text-2xl font-bold text-foreground">Contact Details</h3>
+                            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-sage/10 space-y-6 md:space-y-8">
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">Contact Details</h3>
 
                                 <div className="flex items-start gap-4">
                                     <div className="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -59,8 +59,8 @@ const Connect = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-foreground mb-1">Email Us</h4>
-                                        <a href="mailto:contact@ananthan.in" className="text-muted-foreground hover:text-sage transition-colors">
-                                            contact@ananthan.in
+                                        <a href="mailto:ananthan@voiceoftenkasi.org" className="text-muted-foreground hover:text-sage transition-colors">
+                                            ananthan@voiceoftenkasi.org
                                         </a>
                                     </div>
                                 </div>
@@ -71,27 +71,47 @@ const Connect = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-foreground mb-1">Call Us</h4>
-                                        <a href="tel:+919876543210" className="text-muted-foreground hover:text-sage transition-colors">
-                                            +91 98765 43210
+                                        <a href="tel:+919840328856" className="text-muted-foreground hover:text-sage transition-colors">
+                                            +91 98403 28856
                                         </a>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="bg-sage/5 p-8 rounded-2xl shadow-sm border border-sage/10">
-                                <h3 className="font-display text-2xl font-bold text-foreground mb-6">Follow Us</h3>
-                                <div className="flex gap-4">
-                                    <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-sage hover:bg-sage hover:text-white transition-all duration-300 shadow-sm hover:shadow-md">
-                                        <Twitter className="w-5 h-5" />
+                            <div className="bg-sage/5 p-6 md:p-8 rounded-2xl shadow-sm border border-sage/10">
+                                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6">Follow Us</h3>
+                                <div className="flex flex-wrap gap-3 md:gap-4">
+                                    <a 
+                                        href="https://x.com/AnanthAyyasamy" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center text-sage hover:bg-sage hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+                                    >
+                                        <Twitter className="w-4 h-4 md:w-5 md:h-5" />
                                     </a>
-                                    <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-sage hover:bg-sage hover:text-white transition-all duration-300 shadow-sm hover:shadow-md">
-                                        <Facebook className="w-5 h-5" />
+                                    <a 
+                                        href="https://www.facebook.com/profile.php?id=100091498852259" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center text-sage hover:bg-sage hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+                                    >
+                                        <Facebook className="w-4 h-4 md:w-5 md:h-5" />
                                     </a>
-                                    <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-sage hover:bg-sage hover:text-white transition-all duration-300 shadow-sm hover:shadow-md">
-                                        <Instagram className="w-5 h-5" />
+                                    <a 
+                                        href="https://www.instagram.com/tenkasi_ananthan/" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center text-sage hover:bg-sage hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+                                    >
+                                        <Instagram className="w-4 h-4 md:w-5 md:h-5" />
                                     </a>
-                                    <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-sage hover:bg-sage hover:text-white transition-all duration-300 shadow-sm hover:shadow-md">
-                                        <Linkedin className="w-5 h-5" />
+                                    <a 
+                                        href="https://www.linkedin.com/in/ananthan/" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center text-sage hover:bg-sage hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+                                    >
+                                        <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
                                     </a>
                                 </div>
                             </div>
@@ -104,27 +124,27 @@ const Connect = () => {
                             transition={{ delay: 0.4, duration: 0.6 }}
                             className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-sage/10"
                         >
-                            <h3 className="font-display text-2xl font-bold text-foreground mb-6">Send a Message</h3>
-                            <form className="space-y-6">
-                                <div className="grid md:grid-cols-2 gap-6">
+                            <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-6">Send a Message</h3>
+                            <form className="space-y-4 md:space-y-6">
+                                <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                                     <div className="space-y-2">
                                         <label htmlFor="name" className="text-sm font-medium text-foreground">Name</label>
-                                        <Input id="name" placeholder="Your Name" />
+                                        <Input id="name" placeholder="Your Name" className="h-11 md:h-12" />
                                     </div>
                                     <div className="space-y-2">
                                         <label htmlFor="email" className="text-sm font-medium text-foreground">Email</label>
-                                        <Input id="email" type="email" placeholder="your@email.com" />
+                                        <Input id="email" type="email" placeholder="your@email.com" className="h-11 md:h-12" />
                                     </div>
                                 </div>
                                 <div className="space-y-2">
                                     <label htmlFor="subject" className="text-sm font-medium text-foreground">Subject</label>
-                                    <Input id="subject" placeholder="How can we help?" />
+                                    <Input id="subject" placeholder="How can we help?" className="h-11 md:h-12" />
                                 </div>
                                 <div className="space-y-2">
                                     <label htmlFor="message" className="text-sm font-medium text-foreground">Message</label>
-                                    <Textarea id="message" placeholder="Your message..." className="min-h-[150px]" />
+                                    <Textarea id="message" placeholder="Your message..." className="min-h-[120px] md:min-h-[150px]" />
                                 </div>
-                                <Button className="w-full bg-sage hover:bg-sage-dark text-white h-12 text-lg">
+                                <Button className="w-full bg-sage hover:bg-sage-dark text-white h-12 text-base md:text-lg">
                                     Send Message <Send className="ml-2 w-4 h-4" />
                                 </Button>
                             </form>

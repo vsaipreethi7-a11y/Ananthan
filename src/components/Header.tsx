@@ -48,7 +48,7 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <div>
-                <h1 className="font-display text-lg sm:text-xl font-semibold tracking-wide transition-colors duration-300 text-cream">
+                <h1 className="font-display text-lg sm:text-xl font-semibold tracking-wide transition-colors duration-300 text-cream whitespace-nowrap">
                   Ananthan Ayyasamy
                 </h1>
               </div>
@@ -120,56 +120,83 @@ const Header = () => {
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 lg:hidden"
-          >
-            <div className="absolute inset-0 bg-sage/98 backdrop-blur-lg pt-24 px-6">
-              <nav className="flex flex-col items-center gap-2">
-                {navItems.map((item, index) => (
-                  <motion.div
-                    key={item.path}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
-                    <Link
-                      to={item.path}
-                      className={`block py-3 px-6 text-xl font-display font-medium tracking-wide transition-colors ${location.pathname === item.path
-                        ? "text-gold"
-                        : "text-cream/80 hover:text-gold"
-                        }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
-              </nav>
-              {/* Language Toggle in Mobile Menu */}
-              <div className="mt-8 flex justify-center gap-3">
-                <button
-                  onClick={() => setLanguage('en')}
-                  className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors ${
-                    language === 'en' ? 'bg-gold text-foreground' : 'bg-cream/20 text-cream'
-                  }`}
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
+            />
+            {/* Drawer */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed right-0 top-0 bottom-0 z-50 w-[85%] max-w-sm bg-sage shadow-2xl lg:hidden flex flex-col"
+            >
+              <div className="flex items-center justify-between p-6 border-b border-cream/10">
+                <h2 className="font-display text-xl font-bold text-cream">Menu</h2>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-cream hover:bg-cream/10"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  English
-                </button>
-                <button
-                  onClick={() => setLanguage('ta')}
-                  className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors ${
-                    language === 'ta' ? 'bg-gold text-foreground' : 'bg-cream/20 text-cream'
-                  }`}
-                >
-                  தமிழ்
-                </button>
+                  <X size={24} />
+                </Button>
               </div>
-            </div>
-          </motion.div>
+
+              <div className="flex-1 overflow-y-auto py-8 px-6">
+                <nav className="flex flex-col gap-2">
+                  {navItems.map((item, index) => (
+                    <motion.div
+                      key={item.path}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 + 0.1 }}
+                    >
+                      <Link
+                        to={item.path}
+                        className={`block py-4 px-4 text-lg font-display font-medium rounded-xl transition-all ${location.pathname === item.path
+                          ? "bg-gold text-white"
+                          : "text-cream/80 hover:bg-cream/5 hover:text-gold"
+                          }`}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </nav>
+              </div>
+
+              {/* Language Toggle in Mobile Menu Footer */}
+              <div className="p-8 bg-cream/5 border-t border-cream/10">
+                <p className="text-cream/60 text-xs uppercase tracking-widest mb-4 font-bold text-center">Select Language</p>
+                <div className="flex bg-sage-dark/50 p-1 rounded-xl">
+                  <button
+                    onClick={() => setLanguage('en')}
+                    className={`flex-1 py-3 rounded-lg text-sm font-bold transition-all ${
+                      language === 'en' ? 'bg-gold text-white shadow-lg' : 'text-cream/60 hover:text-cream'
+                    }`}
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => setLanguage('ta')}
+                    className={`flex-1 py-3 rounded-lg text-sm font-bold transition-all ${
+                      language === 'ta' ? 'bg-gold text-white shadow-lg' : 'text-cream/60 hover:text-cream'
+                    }`}
+                  >
+                    தமிழ்
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>
