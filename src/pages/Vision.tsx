@@ -4,11 +4,11 @@ import Layout from "@/components/Layout";
 import visionImg from "@/assets/vision.jpg";
 
 // Import all initiative images
-import oneNationImg from "@/assets/hero/ONE NATION ONE DREAM.jpg";
+import oneNationImg from "@/assets/hero/ONE NATION ONE DREAM.png";
 import tenSemiImg from "@/assets/Journey/Silicon_Startup.jpg";
-import drugFreeImg from "@/assets/hero/DRUG FREE TENKASKI.jpg";
+import drugFreeImg from "@/assets/hero/DFT.png";
 import vaazhaiImg from "@/assets/vaazhai.png";
-import startupSummitImg from "@/assets/hero/startup_tenkasi.jpg";
+import startupSummitImg from "@/assets/hero/startup tenkasi.png";
 import neetImg from "@/assets/hero/youth.jpg";
 import spaceImg from "@/assets/space science bootcamp.jpg";
 import welfareImg from "@/assets/hero/MODI WELFARE CAMPS .jpg";

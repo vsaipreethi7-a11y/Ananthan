@@ -6,11 +6,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import event images
 import meetImg from "@/assets/Journey/bjp_district_president.jpg";
-import drugFreeImg from "@/assets/hero/DRUG FREE TENKASKI.jpg";
-import oneNationImg from "@/assets/hero/ONE NATION ONE DREAM.jpg";
+import drugFreeImg from "@/assets/hero/DFT.png";
+import oneNationImg from "@/assets/hero/ONE NATION ONE DREAM.png";
 import yatraImg from "@/assets/Journey/En_mann_en_makkal.jpg";
 import visitImg from "@/assets/Journey/joined_bjp.jpg";
-import startupImg from "@/assets/hero/startup_tenkasi.jpg";
+import startupImg from "@/assets/hero/startup tenkasi.png";
 
 // New Impact Images
 import impact1Img from "@/assets/impacts/1.jpg";

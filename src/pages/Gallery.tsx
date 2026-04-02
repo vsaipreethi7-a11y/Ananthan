@@ -24,6 +24,7 @@ const galleriesInfo = [
   { title: "Medical Camp", category: "medical", desc: "Free healthcare checkups for the elderly and needy." },
 ];
 
+// Re-evaluate glob imports
 const galleryImages: GalleryImage[] = Object.entries(imageModules)
   .filter(([path]) => {
     const filename = path.split('/').pop()?.toLowerCase() || "";
@@ -341,6 +342,9 @@ const Gallery = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
+              { id: "SlodAZCC_sg", title: "Strategic Vision for Tenkasi" },
+              { id: "pzo_XzzTCVU", title: "Who is Ananthan Ayyasamy? (Features)" },
+              { id: "C7D08YwhxBA", title: "Who is Ananthan Ayyasamy? (Interview)" },
               { id: "V6cDeGqTvlY", title: "Speech Highlights" },
               { id: "qHx_2_gbsrc", title: "Event Coverage" },
               { id: "vOG9FhBCiQk", title: "Keynote Address" },
@@ -353,9 +357,7 @@ const Gallery = () => {
               { id: "U65GxOZg7nM", title: "Campaign Trail" },
               { id: "t5Aa_aaibXo", title: "Vision for 2032" },
               { id: "BqthMnx4YoA", title: "Live Event Coverage" },
-              { id: "pzo_XzzTCVU", title: "Youth Interaction" },
               { id: "PzNRr-LOPEg", title: "Rural Development" },
-              { id: "C7D08YwhxBA", title: "Closing Remarks" }
             ].map((video, index) => (
               <motion.div
                 key={video.id}

@@ -36,8 +36,8 @@ import startupTenkasi from "@/assets/Journey/startup_tenkasi.jpg";
 import governorVisit from "@/assets/Journey/governor_visit.jpg";
 import enMannMakkal from "@/assets/Journey/En_mann_en_makkal.jpg";
 import bjpPresident from "@/assets/Journey/bjp_district_president.jpg";
-import oneNation from "@/assets/hero/ONE NATION ONE DREAM.jpg";
-import megaRally from "@/assets/Journey/governor_visit.jpg";
+import oneNation from "@/assets/hero/ONE NATION ONE DREAM.png";
+import megaRally from "@/assets/Journey/bothai olipu perani.png";
 
 
 const careerHistory = [

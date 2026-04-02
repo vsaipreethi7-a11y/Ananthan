@@ -16,9 +16,9 @@ import {
 } from "@/components/ui/carousel";
 
 import heroProfile from "@/assets/hero/Ananthan.png";
-import oneNationImg from "@/assets/hero/ONE NATION ONE DREAM.jpg";
-import drugFreeImg from "@/assets/hero/DRUG FREE TENKASKI.jpg";
-import startupImg from "@/assets/hero/startup_tenkasi.jpg";
+import oneNationImg from "@/assets/hero/ONE NATION ONE DREAM.png";
+import drugFreeImg from "@/assets/hero/DFT.png";
+import startupImg from "@/assets/hero/startup tenkasi.png";
 import welfareImg from "@/assets/hero/MODI WELFARE CAMPS .jpg";
 import heroVision from "@/assets/hero/vision.jpg";
 import banner1 from "@/assets/banner/1.png";
@@ -221,14 +221,30 @@ const Index = () => {
       {/* Featured Video Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Left Column: Video */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <div className="w-16 h-1 bg-gold mx-auto mb-6" />
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
+              Featured <span className="text-sage">Videos</span>
+            </h2>
+            <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+              Watch the journey, vision, and impact of Ananthan Ayyasamy's work in Tenkasi.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Primary Video - The Journey */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="rounded-lg overflow-hidden shadow-elevated border-4 border-white/50"
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-elevated border border-border group"
             >
               <div className="relative pb-[56.25%] h-0">
                 <iframe
@@ -239,25 +255,79 @@ const Index = () => {
                   allowFullScreen
                 ></iframe>
               </div>
+              <div className="p-6">
+                <h3 className="font-display text-xl font-bold mb-2 group-hover:text-sage transition-colors">From Silicon Valley to Tenkasi Soil</h3>
+                <p className="text-muted-foreground text-sm">Watch the inspiring story of Ananthan Ayyasamy's return to his roots.</p>
+              </div>
             </motion.div>
 
-            {/* Right Column: Content */}
+            {/* New Video 1 */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-elevated border border-border group"
             >
-              <div className="w-16 h-1 bg-gold mb-6" />
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-6">
-                From Silicon Valley to <span className="text-sage">Tenkasi Soil</span>
-              </h2>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
-                Watch the inspiring story of Ananthan Ayyasamy's return to his roots. After a successful career at Intel USA, he chose to dedicate his life to the service of his people in Tenkasi.
-              </p>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                This interview covers his vision, his challenges, and his roadmap for a prosperous district.
-              </p>
+              <div className="relative pb-[56.25%] h-0">
+                <iframe
+                  src="https://www.youtube.com/embed/SlodAZCC_sg"
+                  title="Ananthan Ayyasamy Interview"
+                  className="absolute top-0 left-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-display text-xl font-bold mb-2 group-hover:text-sage transition-colors">Strategic Vision for Tenkasi</h3>
+                <p className="text-muted-foreground text-sm">Exploring the roadmap for industrial and social development.</p>
+              </div>
+            </motion.div>
+
+            {/* New Video 2 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-elevated border border-border group"
+            >
+              <div className="relative pb-[56.25%] h-0">
+                <iframe
+                  src="https://www.youtube.com/embed/pzo_XzzTCVU"
+                  title="Who is Ananthan Ayyasamy?"
+                  className="absolute top-0 left-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-display text-xl font-bold mb-2 group-hover:text-sage transition-colors">Building a Better Tenkasi</h3>
+                <p className="text-muted-foreground text-sm">Direct interaction and community engagement highlights.</p>
+              </div>
+            </motion.div>
+
+            {/* New Video 3 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-elevated border border-border group"
+            >
+              <div className="relative pb-[56.25%] h-0">
+                <iframe
+                  src="https://www.youtube.com/embed/C7D08YwhxBA"
+                  title="BJP Tenkasi Highlights"
+                  className="absolute top-0 left-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-display text-xl font-bold mb-2 group-hover:text-sage transition-colors">Digital Transformation & Governance</h3>
+                <p className="text-muted-foreground text-sm">Implementing modern solutions for grassroots challenges.</p>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -430,7 +500,13 @@ const Index = () => {
                   <img
                     src={initiative.image}
                     alt={initiative.title}
-                    className="w-full h-full object-contain md:object-cover transition-transform duration-700 group-hover:scale-110"
+                    className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${
+                      initiative.title === "Startup Tenkasi" 
+                        ? "object-contain object-center" 
+                        : initiative.title === "One Nation One Dream"
+                        ? "object-contain"
+                        : "object-contain md:object-cover"
+                    }`}
                   />
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
