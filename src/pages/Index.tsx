@@ -100,15 +100,12 @@ const Index = () => {
             {heroSliders.map((slide, index) => (
               <CarouselItem key={index}>
                 {/* Mobile: aspect-ratio container so landscape images display fully */}
-                <div className="relative w-full overflow-hidden
-                  aspect-[4/3] sm:aspect-[16/9] md:aspect-auto md:h-[480px] lg:h-[640px]
-                  bg-[#566039]"
+                <div className="relative w-full overflow-hidden aspect-[4/3] md:aspect-video bg-[#566039]"
                 >
                   <img
                     src={slide.image}
                     alt={slide.title}
-                    className="w-full h-full
-                      object-contain sm:object-contain md:object-fill"
+                    className="w-full h-full object-contain"
                     loading={index === 0 ? "eager" : "lazy"}
                   />
                 </div>
