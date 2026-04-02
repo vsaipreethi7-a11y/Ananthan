@@ -11,19 +11,19 @@ const Connect = () => {
 
     return (
         <Layout>
-            <section className="pt-24 pb-12 bg-gradient-to-br from-cream to-background">
+            <section className="pt-16 md:pt-24 pb-8 md:pb-12 bg-gradient-to-br from-cream to-background">
                 <div className="container mx-auto px-4 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-center mb-16"
+                        className="text-center mb-10 md:mb-16"
                     >
-                        <p className="text-sage font-body text-sm uppercase tracking-[0.2em] mb-4">Get in Touch</p>
-                        <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6">
+                        <p className="text-sage font-body text-xs md:text-sm uppercase tracking-[0.2em] mb-4">Get in Touch</p>
+                        <h1 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4 md:mb-6">
                             Connect with <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">Ananthan</span>
                         </h1>
-                        <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto">
+                        <p className="text-muted-foreground font-body text-base md:text-lg max-w-2xl mx-auto px-4">
                             Have a question, suggestion, or want to join our initiatives? We'd love to hear from you.
                         </p>
                     </motion.div>

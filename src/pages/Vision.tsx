@@ -228,7 +228,7 @@ const Vision = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] flex lg:items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] md:min-h-[75vh] flex lg:items-center justify-center overflow-hidden">
         {/* ... (Hero Image) */}
         <div className="absolute inset-0 z-0">
           <img
@@ -236,10 +236,10 @@ const Vision = () => {
             alt="Vision & Initiatives for Tenkasi 2032"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/75" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80" />
         </div>
 
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-16 md:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -250,27 +250,27 @@ const Vision = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block bg-gold/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6 border border-gold/30"
+              className="inline-block bg-gold/20 backdrop-blur-sm px-5 py-1.5 rounded-full mb-6 border border-gold/30"
             >
-              <p className="text-gold font-body text-sm uppercase tracking-[0.2em] font-semibold">{t('vision.badge')}</p>
+              <p className="text-gold font-body text-[10px] md:text-sm uppercase tracking-[0.2em] font-semibold">{t('vision.badge')}</p>
             </motion.div>
 
-            <h1 className="font-display text-2xl sm:text-3xl md:text-7xl lg:text-8xl font-bold text-white mb-4 md:mb-6 leading-tight">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 md:mb-8 leading-[1.1] md:leading-tight">
               <span className="block">{t('vision.title').split(':')[0]}</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-300 to-gold">
+              <span className="block text-gradient">
                 {t('vision.title').split(':')[1]}
               </span>
             </h1>
 
-            <p className="font-body text-base md:text-2xl text-white/95 max-w-4xl mx-auto leading-relaxed mb-6 md:mb-8">
+            <p className="font-body text-base md:text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-8 md:mb-10 px-4">
               {t('vision.description')}
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="#vision-pillars" className="bg-gold text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-gold/90 transition-colors shadow-lg">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 px-6 sm:px-0">
+              <a href="#vision-pillars" className="bg-gold text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-gold/90 transition-colors shadow-lg text-center">
                 {t('vision.explore')}
               </a>
-              <a href="#initiatives" className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors">
+              <a href="#initiatives" className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors text-center">
                 {t('vision.viewInitiatives')}
               </a>
             </div>
@@ -279,18 +279,18 @@ const Vision = () => {
       </section>
 
       {/* Vision Pillars */}
-      <section id="vision-pillars" className="py-24 bg-background">
+      <section id="vision-pillars" className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-20"
           >
             <h2 className="font-display text-3xl md:text-6xl font-bold text-foreground mb-4 md:mb-6">
               {t('vision.pillarsTitle')}
             </h2>
-            <p className="text-muted-foreground font-body text-base md:text-xl max-w-3xl mx-auto">
+            <p className="text-muted-foreground font-body text-base md:text-xl max-w-3xl mx-auto px-4">
               {t('vision.pillarsDesc')}
             </p>
           </motion.div>
@@ -331,18 +331,18 @@ const Vision = () => {
       </section>
 
       {/* Key Initiatives */}
-      <section id="initiatives" className="py-24 bg-gradient-to-br from-cream to-gold/5">
+      <section id="initiatives" className="py-16 md:py-32 bg-gradient-to-br from-cream to-gold/5">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-20"
           >
-            <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-3xl md:text-6xl font-bold text-foreground mb-6">
               {t('vision.initiativesTitle')}
             </h2>
-            <p className="text-muted-foreground font-body text-lg md:text-xl max-w-3xl mx-auto">
+            <p className="text-muted-foreground font-body text-base md:text-xl max-w-3xl mx-auto px-4">
               {t('vision.initiativesDesc')}
             </p>
           </motion.div>
@@ -390,18 +390,18 @@ const Vision = () => {
       </section>
 
       {/* Roadmap to 2032 */}
-      <section className="py-24 bg-sage text-cream">
+      <section className="py-16 md:py-32 bg-sage text-cream">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-20"
           >
-            <h2 className="font-display text-4xl md:text-6xl font-bold mb-6">
+            <h2 className="font-display text-3xl md:text-6xl font-bold mb-6">
               {t('vision.roadmapTitle')}
             </h2>
-            <p className="text-cream/80 font-body text-lg md:text-xl max-w-2xl mx-auto">
+            <p className="text-cream/80 font-body text-base md:text-xl max-w-2xl mx-auto px-4">
               {t('vision.roadmapDesc')}
             </p>
           </motion.div>

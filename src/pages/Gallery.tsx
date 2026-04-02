@@ -144,17 +144,17 @@ const Gallery = () => {
   return (
     <Layout>
       {/* Gallery Header */}
-      <section className="pt-20 pb-8 bg-cream">
+      <section className="pt-16 md:pt-24 pb-8 md:pb-12 bg-cream">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-3">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
               {t('gallery.title')}
             </h1>
-            <p className="font-body text-base md:text-lg text-muted-foreground">
+            <p className="font-body text-base md:text-lg text-muted-foreground px-4">
               {t('gallery.description')}
             </p>
           </motion.div>

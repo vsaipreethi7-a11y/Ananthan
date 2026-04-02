@@ -250,8 +250,9 @@ const CarouselDots = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
           <button
             key={index}
             className={cn(
-              "h-2 w-2 rounded-full transition-all",
-              index === selectedIndex ? "bg-gold w-6" : "bg-cream/30"
+              "rounded-full transition-all duration-300",
+              "h-1.5 w-1.5",
+              index === selectedIndex ? "bg-gold w-4" : "bg-white/40 hover:bg-white/60"
             )}
             onClick={() => api?.scrollTo(index)}
           >

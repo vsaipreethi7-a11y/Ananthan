@@ -86,17 +86,17 @@ const Media = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-8 pb-12 bg-gradient-subtle">
+      <section className="pt-12 md:pt-24 pb-8 md:pb-16 bg-gradient-subtle overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="inline-block bg-gold/10 px-6 py-2 rounded-full mb-6">
-              <p className="text-sage font-body text-sm uppercase tracking-[0.2em] font-semibold">{t('media.badge')}</p>
+              <p className="text-sage font-body text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">{t('media.badge')}</p>
             </div>
-            <h1 className="font-display text-4xl md:text-7xl font-bold text-foreground mb-6">{t('media.title')}</h1>
-            <p className="font-body text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-8xl font-bold text-foreground mb-6 leading-tight">{t('media.title')}</h1>
+            <p className="font-body text-base md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
               {t('media.description')}
             </p>
-            <p className="font-body text-lg text-sage/80 mt-4">
+            <p className="font-body text-sm md:text-lg text-sage/80 mt-6 md:mt-8">
               Featured in Swarajya Magazine, The Hindu, and 1000+ news imprints
             </p>
           </motion.div>
@@ -186,30 +186,30 @@ const Media = () => {
 
 
         {/* Call to Action */}
-        <section className="text-center bg-gradient-to-r from-sage to-sage-dark p-12 rounded-2xl">
+        <section className="text-center bg-gradient-to-r from-sage to-sage-dark p-8 md:p-16 rounded-3xl mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Quote className="w-12 h-12 text-gold mx-auto mb-4" />
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            <Quote className="w-10 h-10 md:w-16 md:h-16 text-gold mx-auto mb-6" />
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-6">
               Stay Connected
             </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-white/90 text-base md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed px-4">
               Follow our journey and be part of the transformation. Get daily updates, event coverage, and grassroots stories directly on your feed.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 justify-center px-4">
               {socialPlatforms.map((platform, idx) => (
                 <a
                   key={idx}
                   href={platform.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-sage px-6 py-3 rounded-full font-semibold hover:bg-gold hover:text-white transition-colors shadow-md hover:shadow-lg"
+                  className="inline-flex items-center gap-2 bg-white text-sage px-6 md:px-8 py-3 md:py-4 rounded-full font-bold hover:bg-gold hover:text-white transition-all shadow-md hover:shadow-xl hover:-translate-y-1"
                 >
                   <platform.icon className="w-5 h-5" />
-                  {platform.name}
+                  <span className="text-sm md:text-base">{platform.name}</span>
                 </a>
               ))}
             </div>

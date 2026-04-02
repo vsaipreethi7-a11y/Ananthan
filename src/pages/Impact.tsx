@@ -112,24 +112,24 @@ const Impact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-20 pb-12 md:pb-20 bg-gradient-to-br from-sage/5 via-background to-gold/5">
+      <section className="pt-16 md:pt-24 pb-12 md:pb-24 bg-gradient-to-br from-sage/5 via-background to-gold/5 overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="text-left"
             >
-              <div className="inline-block bg-gold/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-block bg-gold/10 px-4 py-2 rounded-full mb-6 mx-auto lg:mx-0">
                 <p className="text-sage font-body text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">{t('impact.badge')}</p>
               </div>
 
-              <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-8xl font-bold text-foreground mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">{t('impact.title')}</span>
               </h1>
 
-              <p className="font-body text-base md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+              <p className="font-body text-base md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-4 md:mb-0">
                 {t('impact.description')}
               </p>
             </motion.div>

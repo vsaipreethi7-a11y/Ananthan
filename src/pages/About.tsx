@@ -263,9 +263,9 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-cream via-background to-cream/50">
+      <section className="pt-16 md:pt-24 pb-8 md:pb-16 bg-gradient-to-br from-cream via-background to-cream/50 overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 md:gap-16 items-center">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -273,12 +273,14 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="text-center lg:text-left order-2 lg:order-1"
             >
-              <h1 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight whitespace-nowrap">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 md:mb-6 leading-[1.1] md:leading-tight">
                 <span>{t('about.title').split(' ')[0]}</span>{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">{t('about.title').split(' ').slice(1).join(' ')}</span>
+                <span className="text-gradient block md:inline-block md:ml-2">
+                  {t('about.title').split(' ').slice(1).join(' ')}
+                </span>
               </h1>
-              <div className="w-32 md:w-48 h-1 md:h-1.5 bg-gold mb-6 md:10 rounded-full mx-auto lg:mx-0" />
-              <div className="space-y-4 font-body text-base md:text-lg text-muted-foreground leading-relaxed">
+              <div className="w-24 md:w-48 h-1 md:h-1.5 bg-gold mb-6 md:mb-10 rounded-full mx-auto lg:mx-0" />
+              <div className="space-y-4 font-body text-sm md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 <p>{t('about.p1')}</p>
                 <p>{t('about.p2')}</p>
                 <p>{t('about.p3')}</p>
@@ -356,7 +358,7 @@ const About = () => {
         </section>
 
         {/* Journey Content Section */}
-        <section className="pt-4 pb-20 bg-gradient-to-b from-white to-cream/50 relative overflow-hidden">
+        <section className="pt-4 pb-12 md:pb-32 bg-gradient-to-b from-white to-cream/50 relative overflow-hidden">
           {/* Background Decorative Elements */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-20 left-10 w-64 h-64 bg-sage/5 rounded-full blur-3xl opacity-60" />
@@ -373,10 +375,10 @@ const About = () => {
                 transition={{ duration: 0.5, ease: "circOut" }}
                 className="max-w-6xl mx-auto"
               >
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center bg-white/40 backdrop-blur-sm p-4 md:p-12 rounded-2xl md:rounded-3xl border border-white/50 shadow-xl">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center bg-white/40 backdrop-blur-sm p-5 md:p-12 rounded-3xl border border-white/50 shadow-xl">
 
                   {/* Image Section - Left */}
-                  <div className="relative group perspective-1000 w-full max-w-[300px] md:max-w-sm mx-auto lg:mx-0">
+                  <div className="relative group perspective-1000 w-full max-w-[280px] md:max-w-md mx-auto lg:mx-0">
                     <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/80 transform transition-transform duration-500 group-hover:-translate-y-2 bg-white/50 backdrop-blur-sm">
                       <img
                         src={activeItem.image}
@@ -387,7 +389,7 @@ const About = () => {
                   </div>
 
                   {/* Content Section - Right */}
-                  <div className="space-y-8 text-left">
+                  <div className="space-y-6 md:space-y-10 text-left">
                     {/* Year Badge */}
                     <motion.div
                       initial={{ opacity: 0, x: -20 }}
@@ -396,30 +398,30 @@ const About = () => {
                       className="inline-flex items-center gap-3"
                     >
 
-                      <div className="relative z-10 bg-sage text-white px-6 py-2 rounded-full font-bold text-xl shadow-lg shadow-sage/20">
+                      <div className="relative z-10 bg-sage text-white px-5 md:px-7 py-2 rounded-full font-bold text-lg md:text-2xl shadow-lg shadow-sage/20">
                         {activeItem.year}
                       </div>
-                      <div className="h-px w-20 bg-sage/30" />
+                      <div className="h-px w-10 md:w-20 bg-sage/30" />
                     </motion.div>
 
                     {/* Title & Description */}
                     <div className="relative z-10 space-y-4 md:space-y-6">
-                      <h2 className="font-display text-2xl md:text-5xl font-bold text-foreground leading-tight">
+                      <h2 className="font-display text-2xl md:text-6xl font-bold text-foreground leading-tight">
                         {activeItem.title}
                       </h2>
 
-                      <p className="text-muted-foreground text-sm md:text-xl leading-relaxed text-left border-l-4 border-gold/30 pl-4 md:pl-6">
+                      <p className="text-muted-foreground text-base md:text-xl leading-relaxed text-left border-l-4 border-gold/30 pl-4 md:pl-8">
                         {activeItem.description}
                       </p>
                     </div>
 
-                    {/* Navigation Controls inside Content (Optional UX Improvement) */}
-                    <div className="flex gap-4 pt-4">
-                      <button onClick={handlePrev} className="group p-3 rounded-full border border-border hover:border-sage bg-white hover:bg-sage transition-all duration-300">
-                        <ChevronLeft className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                    {/* Navigation Controls inside Content */}
+                    <div className="flex gap-4 pt-2 md:pt-6">
+                      <button onClick={handlePrev} className="group p-4 rounded-full border border-border hover:border-sage bg-white hover:bg-sage transition-all duration-300 shadow-sm hover:shadow-md">
+                        <ChevronLeft className="w-6 h-6 text-gray-400 group-hover:text-white" />
                       </button>
-                      <button onClick={handleNext} className="group p-3 rounded-full border border-border hover:border-sage bg-white hover:bg-sage transition-all duration-300">
-                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                      <button onClick={handleNext} className="group p-4 rounded-full border border-border hover:border-sage bg-white hover:bg-sage transition-all duration-300 shadow-sm hover:shadow-md">
+                        <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-white" />
                       </button>
                     </div>
                   </div>

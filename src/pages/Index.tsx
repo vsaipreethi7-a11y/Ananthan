@@ -21,12 +21,12 @@ import drugFreeImg from "@/assets/hero/DFT.png";
 import startupImg from "@/assets/hero/startup tenkasi.png";
 import welfareImg from "@/assets/hero/MODI WELFARE CAMPS .jpg";
 import heroVision from "@/assets/hero/vision.jpg";
-import banner1 from "@/assets/banner/1.png";
-import banner2 from "@/assets/banner/2.png";
-import banner3 from "@/assets/banner/3.png";
-import banner4 from "@/assets/banner/4.png";
-import banner5 from "@/assets/banner/5.png";
-import banner6 from "@/assets/banner/6.png";
+import slide1 from "@/assets/sliders/Slide1.JPG.jpeg";
+import slide2 from "@/assets/sliders/Slide2.JPG.jpeg";
+import slide3 from "@/assets/sliders/Slide3.JPG.jpeg";
+import slide4 from "@/assets/sliders/Slide4.JPG.jpeg";
+import slide5 from "@/assets/sliders/Slide5.JPG.jpeg";
+import slide6 from "@/assets/sliders/Slide6.JPG.jpeg";
 
 
 const stats = [
@@ -75,48 +75,12 @@ const initiatives = [
 ];
 
 const heroSliders = [
-  {
-    subtitle: "BJP TENKASI DISTRICT PRESIDENT",
-    title: "Ananthan Ayyasamy",
-    description: "Bringing Tech Leadership to Politics — A remarkable journey of resilience, excellence, and service from an agricultural labourer's son to Intel Engineering Director. Now dedicated to transforming rural India as a grassroots political leader.",
-    image: banner1,
-    badge: "Public Service Leader"
-  },
-  {
-    subtitle: "Tech & Innovation",
-    title: "Global Tech Visionary",
-    description: "Empowering the next generation with 20+ years of semiconductor expertise. Bringing Silicon Valley excellence to the heart of Tenkasi to create 1 Lakh Hi-Tech jobs by 2032.",
-    image: banner2,
-    badge: "20+ Years Tech Exp"
-  },
-  {
-    subtitle: "Entrepreneur & Strategist",
-    title: "Strategy Meets Service",
-    description: "Driving growth through analytics and business innovation. Building self-sustained village economies that bridge the gap between rural and urban India.",
-    image: banner3,
-    badge: "Business Strategist"
-  },
-  {
-    subtitle: "Social Impact & Reform",
-    title: "Driving Social Change",
-    description: "Committed to deep community growth and drug-free initiatives. Dedicated to creating sustainable opportunities through thoughtful, compassionate leadership.",
-    image: banner4,
-    badge: "Social Reformer"
-  },
-  {
-    subtitle: "Political Engagement",
-    title: "A Leader for the People",
-    description: "Shaping public policy with a purpose. Building robust bridges between high-end technology and effective governance to serve every citizen.",
-    image: banner5,
-    badge: "People's Voice"
-  },
-  {
-    subtitle: "Global Perspectives",
-    title: "Think Global, Act Local",
-    description: "Implementing international standards in local development. Envisioning Tenkasi as the 'Estonia of Asia' through modern R&D and digital infrastructure.",
-    image: banner6,
-    badge: "Future Ready"
-  },
+  { image: slide1, title: "Ananthan Ayyasamy - Public Service Leader" },
+  { image: slide2, title: "Global Tech Visionary" },
+  { image: slide3, title: "Strategy Meets Service" },
+  { image: slide4, title: "Driving Social Change" },
+  { image: slide5, title: "A Leader for the People" },
+  { image: slide6, title: "Think Global, Act Local" },
 ];
 
 
@@ -126,14 +90,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[65vh] flex items-center bg-[#566039] overflow-hidden">
-        {/* Background Pattern - Global to section */}
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23425a3a' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
-
+      <section className="relative overflow-hidden bg-[#566039]">
         <Carousel
           plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
           opts={{ loop: true, align: "start" }}
@@ -142,76 +99,26 @@ const Index = () => {
           <CarouselContent>
             {heroSliders.map((slide, index) => (
               <CarouselItem key={index}>
-                <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 relative z-10 pt-8 pb-16 md:pt-12 md:pb-20 flex items-center min-h-[60vh] md:min-h-[65vh]">
-                  <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center justify-between w-full">
-
-                    {/* Left Column: Text Content */}
-                    <div className="order-2 lg:order-1 flex flex-col justify-center text-center lg:text-left">
-                      <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="relative z-20"
-                      >
-                        {/* Decorative Badge */}
-                        <motion.span 
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.2 }}
-                          className="inline-block px-4 py-1.5 mb-6 bg-gold/10 backdrop-blur-md border border-gold/30 text-gold rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest"
-                        >
-                          {slide.badge || "BJP Tenkasi"}
-                        </motion.span>
-
-                        <p className="text-cream/60 font-body text-[10px] md:text-xs uppercase tracking-[0.25em] mb-4 font-bold">
-                          {slide.subtitle}
-                        </p>
-                        
-                        <h1 className="font-display text-2xl md:text-4xl lg:text-7xl font-bold text-cream leading-[1.2] lg:leading-[1.1] mb-6 drop-shadow-sm whitespace-nowrap">
-                          {slide.title}
-                        </h1>
-
-                        <div className="w-12 md:w-16 h-1 bg-gold mb-8 rounded-full mx-auto lg:mx-0"></div>
-
-                        <p className="font-body text-xs md:text-base lg:text-lg text-cream/80 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
-                          {slide.description}
-                        </p>
-                      </motion.div>
-                    </div>
-
-                    {/* Right Column: Image */}
-                    <div className="order-1 lg:order-2 flex flex-col items-center justify-center relative">
-                      {/* Interactive Glow Behind Image */}
-                      <div className="absolute inset-0 bg-gold/5 blur-[80px] md:blur-[100px] rounded-full"></div>
-                      
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1, ease: "circOut" }}
-                        className="relative w-full flex flex-col items-center"
-                      >
-                        <div className="relative z-20 w-full flex justify-center items-end h-[220px] md:h-[380px] lg:h-[500px]">
-                          <img
-                            src={slide.image}
-                            alt={slide.title}
-                            className={`max-w-[90%] md:max-w-full h-full object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-transform duration-1000 ${
-                              index === 4 ? "scale-[0.8]" : index === 5 ? "scale-95" : "scale-[0.9]"
-                            }`}
-                            loading="eager"
-                          />
-                        </div>
-                      </motion.div>
-                    </div>
-
-                  </div>
+                {/* Mobile: aspect-ratio container so landscape images display fully */}
+                <div className="relative w-full overflow-hidden
+                  aspect-[4/3] sm:aspect-[16/9] md:aspect-auto md:h-[480px] lg:h-[640px]
+                  bg-[#566039]"
+                >
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    className="w-full h-full
+                      object-contain sm:object-contain md:object-fill"
+                    loading={index === 0 ? "eager" : "lazy"}
+                  />
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          
-          {/* Bottom navigation controls */}
-          <div className="absolute bottom-6 left-0 right-0 z-50 flex items-center justify-center pointer-events-none">
-            <div className="flex-shrink-0 pointer-events-auto">
+
+          {/* Small Dot navigation */}
+          <div className="absolute bottom-4 left-0 right-0 z-50 flex items-center justify-center pointer-events-none">
+            <div className="flex-shrink-0 pointer-events-auto px-4 py-2">
               <CarouselDots />
             </div>
           </div>
@@ -219,20 +126,20 @@ const Index = () => {
       </section>
 
       {/* Featured Video Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 md:py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-16"
           >
             <div className="w-16 h-1 bg-gold mx-auto mb-6" />
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
               Featured <span className="text-sage">Videos</span>
             </h2>
-            <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               Watch the journey, vision, and impact of Ananthan Ayyasamy's work in Tenkasi.
             </p>
           </motion.div>
@@ -255,7 +162,7 @@ const Index = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <h3 className="font-display text-xl font-bold mb-2 group-hover:text-sage transition-colors">From Silicon Valley to Tenkasi Soil</h3>
                 <p className="text-muted-foreground text-sm">Watch the inspiring story of Ananthan Ayyasamy's return to his roots.</p>
               </div>
@@ -278,7 +185,7 @@ const Index = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <h3 className="font-display text-xl font-bold mb-2 group-hover:text-sage transition-colors">Strategic Vision for Tenkasi</h3>
                 <p className="text-muted-foreground text-sm">Exploring the roadmap for industrial and social development.</p>
               </div>
@@ -301,7 +208,7 @@ const Index = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <h3 className="font-display text-xl font-bold mb-2 group-hover:text-sage transition-colors">Building a Better Tenkasi</h3>
                 <p className="text-muted-foreground text-sm">Direct interaction and community engagement highlights.</p>
               </div>
@@ -324,7 +231,7 @@ const Index = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <h3 className="font-display text-xl font-bold mb-2 group-hover:text-sage transition-colors">Digital Transformation & Governance</h3>
                 <p className="text-muted-foreground text-sm">Implementing modern solutions for grassroots challenges.</p>
               </div>
@@ -407,9 +314,9 @@ const Index = () => {
 
 
       {/* Journey Preview */}
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-start">
 
             {/* Left Column: Intro Content */}
             <motion.div
@@ -417,9 +324,9 @@ const Index = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:sticky lg:top-32"
+              className="lg:sticky lg:top-32 mb-8 lg:mb-0"
             >
-              <p className="text-sage font-body text-sm uppercase tracking-[0.2em] mb-4 md:mb-6">{t('about.journey')}</p>
+              <p className="text-sage font-body text-xs md:text-sm uppercase tracking-[0.2em] mb-4 md:mb-6">{t('about.journey')}</p>
               <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-4 md:mb-6 leading-tight">
                 From Village <br className="hidden md:block" /> to Global Tech <br className="hidden md:block" />
                 <span className="text-sage">Back to Grassroots</span>
@@ -467,25 +374,25 @@ const Index = () => {
       </section>
 
       {/* Initiatives Section */}
-      <section className="py-24 bg-gradient-to-b from-cream to-background">
+      <section className="py-16 md:py-32 bg-gradient-to-b from-cream to-background">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-10 md:mb-20"
           >
-            <p className="text-sage font-body text-sm uppercase tracking-[0.2em] mb-4">{t('nav.initiatives')}</p>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+            <p className="text-sage font-body text-xs md:text-sm uppercase tracking-[0.2em] mb-4">{t('nav.initiatives')}</p>
+            <h2 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4">
               Transforming <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">Tenkasi</span>
             </h2>
-            <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground font-body text-base md:text-lg max-w-2xl mx-auto px-4">
               Bringing real change through impactful programs and community-driven initiatives
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10 max-w-6xl mx-auto">
             {initiatives.map((initiative, index) => (
               <motion.div
                 key={initiative.title}
@@ -493,7 +400,7 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="relative h-[400px] bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 group overflow-hidden"
+                className="relative h-[320px] md:h-[450px] bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 group overflow-hidden"
               >
                 {/* Full Background Image */}
                 <div className="absolute inset-0 bg-black">
@@ -550,7 +457,7 @@ const Index = () => {
       </section>
 
       {/* Vision Quote Section */}
-      <section id="vision-quote" className="py-24 relative overflow-hidden">
+      <section id="vision-quote" className="py-16 md:py-32 relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
