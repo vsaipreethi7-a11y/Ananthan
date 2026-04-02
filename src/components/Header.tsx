@@ -127,7 +127,7 @@ const Header = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm lg:hidden"
             />
             {/* Drawer */}
             <motion.div
@@ -135,7 +135,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 bottom-0 z-50 w-[85%] max-w-sm bg-sage shadow-2xl lg:hidden flex flex-col"
+              className="fixed right-0 top-0 bottom-0 z-[70] w-[85%] max-w-sm bg-sage shadow-2xl lg:hidden flex flex-col"
             >
               <div className="flex items-center justify-between p-6 border-b border-cream/10">
                 <h2 className="font-display text-xl font-bold text-cream">Menu</h2>

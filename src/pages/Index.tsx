@@ -114,7 +114,7 @@ const Index = () => {
           </CarouselContent>
 
           {/* Small Dot navigation */}
-          <div className="absolute bottom-4 left-0 right-0 z-50 flex items-center justify-center pointer-events-none">
+          <div className="absolute bottom-4 left-0 right-0 z-20 flex items-center justify-center pointer-events-none">
             <div className="flex-shrink-0 pointer-events-auto px-4 py-2">
               <CarouselDots />
             </div>
