@@ -112,24 +112,27 @@ const Impact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-16 md:pt-24 pb-12 md:pb-24 bg-gradient-to-br from-sage/5 via-background to-gold/5 overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1f2614] via-[#3f4d29] to-[#7d8b4c] -mt-px">
+        <div className="absolute -top-20 -left-16 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
+        <div className="absolute -bottom-20 -right-16 h-72 w-72 rounded-full bg-sage/35 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_45%)]" />
+        <div className="container relative z-10 mx-auto px-4 lg:px-8 pt-6 pb-10 md:pt-8 md:pb-14">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center min-h-[420px] md:min-h-[520px]">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="text-left"
             >
-              <div className="inline-block bg-gold/10 px-4 py-2 rounded-full mb-6 mx-auto lg:mx-0">
-                <p className="text-sage font-body text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">{t('impact.badge')}</p>
+              <div className="inline-block bg-gold/20 border border-gold/35 px-4 py-2 rounded-full mb-6 mx-auto lg:mx-0">
+                <p className="text-gold-light font-body text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">{t('impact.badge')}</p>
               </div>
 
-              <h1 className="font-display text-4xl md:text-5xl lg:text-8xl font-bold text-foreground mb-6 leading-tight">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">{t('impact.title')}</span>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-8xl font-bold text-white mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
+                <span className="text-white">{t('impact.title')}</span>
               </h1>
 
-              <p className="font-body text-base md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-4 md:mb-0">
+              <p className="font-body text-base md:text-xl text-white/95 max-w-2xl leading-relaxed mb-4 md:mb-0 bg-black/20 border border-white/10 rounded-xl p-4 md:p-5 backdrop-blur-[2px]">
                 {t('impact.description')}
               </p>
             </motion.div>
@@ -140,17 +143,15 @@ const Impact = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50">
+              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-gold/35 via-transparent to-white/10 blur-md" />
+              <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.65)] border border-white/30 bg-black/25">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
                 <img
                   src={impactImg}
                   alt="Grassroots Impact in Tenkasi"
-                  className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                  className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700 saturate-110 contrast-105"
                 />
               </div>
-              {/* Decorative elements */}
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gold/20 rounded-full blur-2xl -z-10" />
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-sage/20 rounded-full blur-2xl -z-10" />
             </motion.div>
           </div>
         </div>

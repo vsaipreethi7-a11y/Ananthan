@@ -41,7 +41,7 @@ const Header = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="sticky top-0 z-50 bg-sage shadow-md py-4"
+        className="sticky top-0 z-50 bg-gradient-to-r from-sage-dark via-sage to-sage-dark shadow-md py-4 border-b border-cream/10"
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between">

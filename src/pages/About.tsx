@@ -26,18 +26,19 @@ import ananthan1Img from "@/assets/Ananthan1_nobg.png";
 import born from "@/assets/Journey/Born.jpg";
 import adversity from "@/assets/Journey/adversity_tmp.jpg";
 import nitTrichy from "@/assets/Journey/Nit_Trichy.jpg";
-import siliconStartup from "@/assets/Journey/Silicon_Startup.jpg";
-import intel from "@/assets/Journey/intel.jpg";
+import siliconStartup from "@/assets/Journey/Silicon_Startup.png";
+import intel from "@/assets/Journey/intel.png";
 import politicalSteward from "@/assets/Journey/En_mann_en_makkal.jpg";
 import joinedBjp from "@/assets/Journey/joined_bjp.jpg";
-import voiceOfTenkasi from "@/assets/Journey/Voice_of_Tenkasi.jpg";
+import voiceOfTenkasi from "@/assets/Journey/VOT.PNG";
 import prideOfIndia from "@/assets/Journey/Pride_of_India.jpg";
-import startupTenkasi from "@/assets/Journey/startup_tenkasi.jpg";
-import governorVisit from "@/assets/Journey/governor_visit.jpg";
+import startupTenkasi from "@/assets/Journey/startup_tenkasi.PNG";
+import governorVisit from "@/assets/Journey/governer_visit.png";
 import enMannMakkal from "@/assets/Journey/En_mann_en_makkal.jpg";
 import bjpPresident from "@/assets/Journey/bjp_district_president.jpg";
 import oneNation from "@/assets/hero/ONE NATION ONE DREAM.png";
 import megaRally from "@/assets/Journey/bothai olipu perani.png";
+import mbaImage from "@/assets/Journey/MBA.png";
 
 
 const careerHistory = [
@@ -155,7 +156,7 @@ const journeyData = [
     title: "MBA with Distinction",
     description:
       "Earned MBA from Arizona State University with Distinction, combining technical expertise with business acumen.",
-    image: adversity,
+    image: mbaImage,
   },
   {
     year: "2016",
@@ -263,24 +264,20 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-16 md:pt-24 pb-8 md:pb-16 bg-gradient-to-br from-cream via-background to-cream/50 overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 md:gap-16 items-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1f2614] via-[#3f4d29] to-[#7d8b4c] -mt-px">
+        <div className="absolute -top-20 -left-16 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
+        <div className="absolute -bottom-20 -right-16 h-72 w-72 rounded-full bg-sage/35 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_45%)]" />
+        <div className="container relative z-10 mx-auto px-4 lg:px-8 pt-6 pb-10 md:pt-8 md:pb-14">
+          <div className="grid lg:grid-cols-[1.35fr_0.65fr] gap-8 md:gap-12 items-center min-h-[420px] md:min-h-[520px]">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center lg:text-left order-2 lg:order-1"
+              className="text-center lg:text-left order-2 lg:order-1 text-white"
             >
-              <h1 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 md:mb-6 leading-[1.1] md:leading-tight">
-                <span>{t('about.title').split(' ')[0]}</span>{' '}
-                <span className="text-gradient block md:inline-block md:ml-2">
-                  {t('about.title').split(' ').slice(1).join(' ')}
-                </span>
-              </h1>
-              <div className="w-24 md:w-48 h-1 md:h-1.5 bg-gold mb-6 md:mb-10 rounded-full mx-auto lg:mx-0" />
-              <div className="space-y-4 font-body text-sm md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <div className="space-y-4 font-body text-sm md:text-lg text-white/95 leading-relaxed max-w-3xl mx-auto lg:mx-0 bg-black/20 border border-white/10 rounded-xl p-5 md:p-6 backdrop-blur-[2px]">
                 <p>{t('about.p1')}</p>
                 <p>{t('about.p2')}</p>
                 <p>{t('about.p3')}</p>
@@ -297,12 +294,12 @@ const About = () => {
               className="flex justify-center lg:justify-end order-1 lg:order-2"
             >
               <div className="relative w-full max-w-md">
-                <div className="absolute -inset-6 bg-gradient-to-br from-sage/20 to-gold/20 rounded-2xl blur-2xl" />
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-gold/35 via-transparent to-white/10 blur-md" />
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/30 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.65)] bg-black/25">
                   <img
                     src={ananthanImage}
                     alt="Ananthan Ayyasamy"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-top saturate-110 contrast-105"
                   />
                 </div>
               </div>

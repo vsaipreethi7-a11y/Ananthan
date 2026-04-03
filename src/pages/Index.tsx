@@ -21,12 +21,12 @@ import drugFreeImg from "@/assets/hero/DFT.png";
 import startupImg from "@/assets/hero/startup tenkasi.png";
 import welfareImg from "@/assets/hero/MODI WELFARE CAMPS .jpg";
 import heroVision from "@/assets/hero/vision.jpg";
-import slide1 from "@/assets/sliders/Slide1.JPG.jpeg";
-import slide2 from "@/assets/sliders/Slide2.JPG.jpeg";
-import slide3 from "@/assets/sliders/Slide3.JPG.jpeg";
-import slide4 from "@/assets/sliders/Slide4.JPG.jpeg";
-import slide5 from "@/assets/sliders/Slide5.JPG.jpeg";
-import slide6 from "@/assets/sliders/Slide6.JPG.jpeg";
+import banner1 from "@/assets/banner/1.jpeg";
+import banner2 from "@/assets/banner/2.jpeg";
+import banner3 from "@/assets/banner/3.jpeg";
+import banner4 from "@/assets/banner/4.png";
+import banner5 from "@/assets/banner/5.png";
+import banner6 from "@/assets/banner/6.jpeg";
 
 
 const stats = [
@@ -75,12 +75,48 @@ const initiatives = [
 ];
 
 const heroSliders = [
-  { image: slide1, title: "Ananthan Ayyasamy - Public Service Leader" },
-  { image: slide2, title: "Global Tech Visionary" },
-  { image: slide3, title: "Strategy Meets Service" },
-  { image: slide4, title: "Driving Social Change" },
-  { image: slide5, title: "A Leader for the People" },
-  { image: slide6, title: "Think Global, Act Local" },
+  {
+    image: banner1,
+    badge: "BJP TENKASI DISTRICT PRESIDENT",
+    title: "Ananthan Ayyasamy",
+    description:
+      "Bringing Tech Leadership to Politics - A remarkable journey of resilience, excellence, and service from an agricultural labourer's son to Intel Engineering Director in USA. Now dedicated to transforming rural India as a grassroots political leader, envisioning One Lakh Hi-Tech Jobs in Tenkasi by 2032.",
+  },
+  {
+    image: banner2,
+    badge: "TECH & INNOVATION",
+    title: "Tech & Innovation",
+    description:
+      "Empowering the next generation of technology through leadership in semiconductor design, analytics, and cutting-edge solutions.",
+  },
+  {
+    image: banner3,
+    badge: "ENTREPRENEURSHIP",
+    title: "Entrepreneurship Meets Strategy",
+    description:
+      "Director of multiple high-impact companies focused on analytics, semiconductor technology, and strategic business innovation.",
+  },
+  {
+    image: banner4,
+    badge: "SOCIAL IMPACT",
+    title: "Driving Social Change",
+    description:
+      "Committed to community growth, sustainable development, and creating opportunities for all through thoughtful leadership.",
+  },
+  {
+    image: banner5,
+    badge: "PUBLIC LEADERSHIP",
+    title: "A Leader for the People",
+    description:
+      "Serving and shaping public policy with purpose - building bridges between technology and governance.",
+  },
+  {
+    image: banner6,
+    badge: "GLOBAL TO LOCAL",
+    title: "Think Global, Act Local",
+    description:
+      "Bridging global technology standards with local community needs - expanding horizons for future generations.",
+  },
 ];
 
 
@@ -90,7 +126,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#566039]">
+      <section className="relative overflow-hidden bg-[#566039] -mt-px">
         <Carousel
           plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
           opts={{ loop: true, align: "start" }}
@@ -99,23 +135,51 @@ const Index = () => {
           <CarouselContent>
             {heroSliders.map((slide, index) => (
               <CarouselItem key={index}>
-                {/* Mobile: aspect-ratio container so landscape images display fully */}
-                <div className="relative w-full overflow-hidden aspect-[4/3] md:aspect-video bg-[#566039]"
-                >
-                  <img
-                    src={slide.image}
-                    alt={slide.title}
-                    className="w-full h-full object-contain"
-                    loading={index === 0 ? "eager" : "lazy"}
-                  />
+                {/* Enhanced split hero: text left, image right */}
+                <div className="relative w-full overflow-hidden bg-gradient-to-br from-[#1f2614] via-[#3f4d29] to-[#7d8b4c]">
+                  <div className="absolute -top-20 -left-16 h-64 w-64 rounded-full bg-gold/25 blur-3xl" />
+                  <div className="absolute -bottom-20 -right-16 h-72 w-72 rounded-full bg-sage/35 blur-3xl" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_45%)]" />
+                  <div className="container mx-auto px-4 lg:px-8 pt-3 pb-8 sm:pt-4 sm:pb-10 md:pt-6 md:pb-14">
+                    <div className="grid items-center gap-6 md:gap-8 lg:gap-12 md:grid-cols-2 min-h-[420px] sm:min-h-[470px] md:min-h-[520px] lg:min-h-[580px]">
+                      <div className="relative z-10 text-white order-2 md:order-1 text-center md:text-left">
+                        {slide.badge && (
+                          <p className="inline-block text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.18em] uppercase bg-gold/20 text-gold-light border border-gold/35 rounded-full px-3 py-1.5 mb-4">
+                            {slide.badge}
+                          </p>
+                        )}
+                        <h1 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-4 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
+                          {slide.title}
+                        </h1>
+                        <p className="font-body text-sm sm:text-base lg:text-lg text-white/95 leading-relaxed max-w-2xl mx-auto md:mx-0 bg-black/20 border border-white/10 rounded-xl p-4 md:p-5 backdrop-blur-[2px]">
+                          {slide.description}
+                        </p>
+                      </div>
+
+                      <div className="relative z-10 order-1 md:order-2">
+                        <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-gold/35 via-transparent to-white/10 blur-md" />
+                        <div className="relative rounded-2xl overflow-hidden border border-white/30 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.65)] bg-black/25">
+                          <div className="aspect-[4/3] sm:aspect-[16/10] md:aspect-[4/3] lg:aspect-[16/10]">
+                            <img
+                              src={slide.image}
+                              alt={slide.title}
+                              className="w-full h-full object-cover object-center saturate-110 contrast-105"
+                              loading={index === 0 ? "eager" : "lazy"}
+                            />
+                          </div>
+                          <div className="absolute inset-0 ring-1 ring-inset ring-white/20 pointer-events-none" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
 
           {/* Small Dot navigation */}
-          <div className="absolute bottom-4 left-0 right-0 z-20 flex items-center justify-center pointer-events-none">
-            <div className="flex-shrink-0 pointer-events-auto px-4 py-2">
+          <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-6 md:right-6 z-20 flex items-center justify-end pointer-events-none">
+            <div className="flex-shrink-0 pointer-events-auto px-3 py-2 rounded-full bg-black/25 backdrop-blur-sm border border-white/20">
               <CarouselDots />
             </div>
           </div>
@@ -262,7 +326,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 1 * 0.1, duration: 0.6 }}
-              className="bg-white border border-sage/10 p-8 rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
+              className="bg-white border border-sage/10 p-4 md:p-8 rounded-xl md:rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
             >
               <Lightbulb className="w-8 h-8 md:w-10 md:h-10 text-gold mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
               <p className="font-display text-2xl md:text-5xl font-bold text-sage mb-1 md:mb-2">
@@ -278,7 +342,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 2 * 0.1, duration: 0.6 }}
-              className="bg-white border border-sage/10 p-8 rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
+              className="bg-white border border-sage/10 p-4 md:p-8 rounded-xl md:rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
             >
               <GraduationCap className="w-8 h-8 md:w-10 md:h-10 text-gold mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
               <p className="font-display text-2xl md:text-5xl font-bold text-sage mb-1 md:mb-2">
@@ -294,7 +358,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 3 * 0.1, duration: 0.6 }}
-              className="bg-white border border-sage/10 p-8 rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
+              className="bg-white border border-sage/10 p-4 md:p-8 rounded-xl md:rounded-2xl shadow-sm text-center hover:shadow-md hover:border-sage/30 transition-all duration-300 group"
             >
               <Building2 className="w-8 h-8 md:w-10 md:h-10 text-gold mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
               <p className="font-display text-2xl md:text-5xl font-bold text-sage mb-1 md:mb-2">
